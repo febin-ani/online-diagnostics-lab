@@ -7,23 +7,33 @@ if (isset($_POST['submit'])){
     $test_desc=$_POST['test_desc'];
     $price=$_POST['price'];
 
-    $sql="INSERT INTO `tb_test`(`test_name`,`test_desc`,`price`)
-          VALUES('$test_name','$test_desc','$price')";
 
-    $query=mysqli_query($conn,$sql);
+    $name_query = "SELECT * FROM `tb_test` WHERE test_name='$test_name' ";
+    $run = mysqli_query($conn, $name_query);
+    if(mysqli_num_rows($run) > 0)
+    {
+        $_SESSION['status'] = "Test $test_name Already Added!";
+        $_SESSION['status_code'] = "error";
+        header('Location:../addtest.php');  
+    } else {
 
-    if ($query) {
-    
-    ?>
+        $sql="INSERT INTO `tb_test`(`test_name`,`test_desc`,`price`)
+            VALUES('$test_name','$test_desc','$price')";
 
-    <div class="alert alert-success alert-dismissible fade show" role="alert">
-    Test Added!
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-        
-    <?php
-    header('location:../addtest.php');
+        $query=mysqli_query($conn,$sql);
 
+        if ($query) {
+            // echo "Saved";
+            $_SESSION['status'] = "Test Added";
+            $_SESSION['status_code'] = "success";
+            header('Location:../managetest.php');
+        }
+        else 
+        {
+            $_SESSION['status'] = "Test Not Added";
+            $_SESSION['status_code'] = "error";
+            header('Location:../addtest.php');  
+        }
     }
 }
 

@@ -77,18 +77,18 @@
                       // echo "<td>".$row['aid']."</td>";
                       echo "<td>".$row['auname']."</td>";
                       echo "<td>".$row['aemail']."</td>";
-                      echo "<td>".'$'.$row['apass']."</td>";
+                      echo "<td>".$row['apass']."</td>";
                       echo "<td>";
                       ?>
                       <button  class="btn btn-success btn-sm">
-                        <a class="link-light" href="update-admin.php?aid=<?php echo $row["aid"]; ?>">UPDATE</button>
+                        <a class="link-light" href="modify/update-admin.php?aid=<?php echo $row["aid"]; ?>">UPDATE</button>
                       <?php
                       echo "</td>";
 
                       echo "<td>";
                       ?>
                       <button class="btn btn-danger btn-sm">
-                        <a class="link-light" href="delete-admin.php?aid=<?php echo $row["aid"]; ?>">DELETE</button>
+                        <a class="link-light" href="modify/delete-admin.php?aid=<?php echo $row["aid"]; ?>">DELETE</button>
                       <?php
                       echo "</td>";
 
