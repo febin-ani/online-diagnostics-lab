@@ -4,7 +4,7 @@
       &copy;  All Rights Reserved
     </div>
     <div class="credits">
-      Designed by <a href="https://github.com/febin-ani"><i class="ri-github-fill"></i>Febin Ani</a>
+      Designed by <a href="https://github.com/febin-ani">Febin Ani<i class="ri-github-fill"></i></a>
     </div>
   </footer><!-- End Footer -->
 

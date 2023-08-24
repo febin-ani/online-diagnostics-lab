@@ -1,4 +1,7 @@
-<?php include('constant/header.php'); ?>
+<?php 
+	include('constant/header.php');
+	include('constant/sidebar.php');
+?>
 
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 <main id="main" class="main">

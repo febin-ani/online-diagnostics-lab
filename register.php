@@ -1,4 +1,7 @@
-<?php include('constant/header.php'); ?>
+<?php 
+	include('constant/header.php');
+	include('constant/sidebar.php');
+?>
 
 <main id="main" class="main">
 
