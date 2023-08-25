@@ -13,11 +13,9 @@ if (isset($_POST['register'])) {
     if(mysqli_num_rows($run) > 0)
     {
         $_SESSION['status'] = "Email Already Taken. Please Try Another one.";
-        $_SESSION['status_code'] = "error";
+        // $_SESSION['status_code'] = "error";
         header('Location:../register.php');  
-    }
-    else
-    {
+    } else {
         if($apass === $cpass){
             $sql="INSERT INTO `tb_aregister`(`auname`,`aemail`,`apass`)
             VALUES('$auname','$aemail','$apass')";
@@ -27,18 +25,18 @@ if (isset($_POST['register'])) {
             if ($query) {
                 // echo "Saved";
                 $_SESSION['status'] = "Admin Profile Added";
-                $_SESSION['status_code'] = "success";
+                // $_SESSION['status_code'] = "success";
                 header('Location:../register.php');
             }
             else 
             {
                 $_SESSION['status'] = "Admin Profile Not Added";
-                $_SESSION['status_code'] = "error";
+                // $_SESSION['status_code'] = "error";
                 header('Location:../register.php');  
             }
         } else {
             $_SESSION['status'] = "Password and Confirm Password Does Not Match";
-            $_SESSION['status_code'] = "warning";
+            // $_SESSION['status_code'] = "warning";
             header('Location:../register.php');  
         }
     }

@@ -45,18 +45,25 @@
     </div>
   </div>
 
+
     <div class="pagetitle">
       <h1>View Admin Details</h1>
       <!-- Button trigger modal -->
       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addadminprofile">
           Add Admin Profile
-      </button>
+      </button>  
     </div><!-- End Page Title -->
+
+    <?php
+      if(isset($_SESSION['status']) && $_SESSION['status'] !=''){
+        echo '<h6 class="text-danger"> '.$_SESSION["status"].' </h6>';
+        unset($_SESSION['status']);
+      }
+    ?>
 
     <section class="section">
       <div class="row">
-        <div class="col-lg-12">
-
+        <div class="col-lg-12">    
           <table class="table">
             <thead>
               <tr>
@@ -71,7 +78,6 @@
             <tbody>
 
             <?php
-              include('constant/config.php');
 
               $res=mysqli_query($conn,"SELECT * FROM `tb_aregister`");
               

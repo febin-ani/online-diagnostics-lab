@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	include('constant/topbar.php');
 ?>
 
@@ -13,15 +14,8 @@
 					</div>
 
 					<div class="card shadow-lg">
-						<div class="card-body p-3">
-							<h1 class="fs-4 card-title fw-bold mb-4">Admin Login</h1>
-
-							<?php
-							if(isset($_SESSION['status']) && $_SESSION['status'] != ''){
-								echo '<h4 class="bg-danger test-white">'.$_SESSION['status'].'</h4';
-								unset($_SESSION['status']);
-							}
-							?>
+						<div class="card-body p-4">
+							<h1 class="fs-4 card-title fw-bold mb-2">Admin Login</h1>
 
 							<form method="POST" action="php-action/loginaction.php" >
 								<div class="mb-3">
@@ -33,6 +27,14 @@
 									<label class="mb-2 text-muted" for="password">Password</label>
 									<input type="password" class="form-control" name="login_pass" required>
 								</div>
+
+								
+								<?php
+								if(isset($_SESSION['status']) && $_SESSION['status'] !=''){
+									echo '<h6 class="text-danger"> '.$_SESSION["status"].' </h6>';
+									unset($_SESSION['status']);
+								}
+								?>
 
 								<div class="d-flex align-items-center">
 									<button type="submit" name="login" class="btn btn-primary ms-auto">

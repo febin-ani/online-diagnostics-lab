@@ -22,6 +22,8 @@ a:hover {
   text-decoration: none;
 }
 
+
+
 h1,
 h2,
 h3,
@@ -60,7 +62,7 @@ h6 {
   font-size: 24px;
   margin-bottom: 0;
   font-weight: 600;
-  color: #012970;
+  color: rgb(71, 69, 136);
 }
 
 /*--------------------------------------------------------------
@@ -368,7 +370,7 @@ h6 {
 .logo span {
   font-size: 26px;
   font-weight: 700;
-  color: #012970;
+  color: rgb(71, 69, 136);
   font-family: "Nunito", sans-serif;
 }
 

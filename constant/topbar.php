@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Avica Diagnostics Lab System</title>
+  <title>Avica Diagnostics Lab - Login</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -28,7 +28,7 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/topbar.css" rel="stylesheet">
-  
+
 
 </head>
 
@@ -46,10 +46,9 @@
 </div><!-- End Logo -->
 
 
-<div class="contact-info d-none d-sm-block p-2 text-center align-items-center text-light"
-        style="background-color: rgba(71,69,136,255);">
-    <i class="bi bi-phone"></i> +91 5465673465
-    <i class="ps-3 bi bi-envelope"></i> <a class="text-light" href="mailto:contactlab@gmail.com">contactlab@gmail.com</a>
+<div class="contact-info d-none d-sm-block p-2 text-center align-items-center text-light" style="background-color: rgba(71,69,136,255);">
+    <i class="bi bi-phone"></i> +91 9947550817
+    <i class="ps-3 bi bi-envelope"></i> <a class="text-light" href="mailto:contactavica@gmail.com">contactavica@gmail.com</a>
 </div>
 
 <!-- <div class="search-bar">
