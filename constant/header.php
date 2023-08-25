@@ -121,7 +121,9 @@
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
-              <h6>Febin Ani</h6>
+              <h6>
+              Admin
+              </h6>
               <span></span>
             </li>
             <li>
@@ -159,10 +161,11 @@
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="#">
-                <i class="bi bi-box-arrow-right"></i>
-                <span>Sign Out</span>
-              </a>
+              <form action="./php-action/logoutaction.php" method="POST">
+                <button type="submit" name="logout" class="dropdown-item" >
+                  <span>Sign Out</span>
+                </button>
+              </form>
             </li>
 
           </ul><!-- End Profile Dropdown Items -->

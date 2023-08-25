@@ -1,5 +1,5 @@
 <?php
-include('constant/topbar.php');
+	include('constant/topbar.php');
 ?>
 
 <main id="main" class="main">
@@ -9,47 +9,40 @@ include('constant/topbar.php');
 				<div class="col-xxl-5 col-xl-5 col-lg-5 col-md-7 col-sm-9">
 					<div class="text-center my-5">
 						<img src="assets/img/apple-touch-icon.png" alt="logo" width="100">
-            <h1 class="fs-4 card-title fw-bold mb-4 text-white">Avica Diagnostics Center</h1>
+            			<h1 class="fs-4 card-title fw-bold mb-4 text-white">Avica Diagnostics Center</h1>
+						<?php
+							if(isset($_SESSION['status']) && $_SESSION['status'] != ''){
+
+								
+							}
+						?>
+
 					</div>
+
 					<div class="card shadow-lg">
-						<div class="card-body p-5">
+						<div class="card-body p-3">
 							<h1 class="fs-4 card-title fw-bold mb-4">Admin Login</h1>
-							<form method="POST" class="needs-validation" novalidate="" autocomplete="off">
+
+							<form method="POST" action="php-action/loginaction.php" >
 								<div class="mb-3">
 									<label class="mb-2 text-muted" for="email">Email Address</label>
-									<input id="email" type="email" class="form-control" name="aemail" value="" required autofocus>
-									<div class="invalid-feedback">
-										Email is invalid
-									</div>
+									<input type="email" class="form-control" name="login_email" value="" required autofocus>
 								</div>
 
 								<div class="mb-3">
-									<div class="mb-2 w-100">
-										<label class="text-muted" for="password">Password</label>
-										<!-- <a href="forgot.html" class="float-end">
-											Forgot Password?
-										</a> -->
-									</div>
-									<input id="password" type="password" class="form-control" name="password" required>
-								    <div class="invalid-feedback">
-								    	Password is required
-							    	</div>
+									<label class="mb-2 text-muted" for="password">Password</label>
+									<input type="password" class="form-control" name="login_pass" required>
 								</div>
 
 								<div class="d-flex align-items-center">
-									<div class="form-check">
-										<input type="checkbox" name="remember" id="remember" class="form-check-input">
-										<label for="remember" class="form-check-label">Remember Me</label>
-									</div>
-									<button type="submit" class="btn btn-primary ms-auto">
+									<button type="submit" name="login" class="btn btn-primary ms-auto">
 										Login
 									</button>
 								</div>
 							</form>
+
 						</div>
-						
 					</div>
-					
 				</div>
 			</div>
 		</div>
