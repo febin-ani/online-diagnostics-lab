@@ -122,9 +122,8 @@
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
               <h6>
-              Admin
+              <?php echo $_SESSION['auname']; ?>
               </h6>
-              <span></span>
             </li>
             <li>
               <hr class="dropdown-divider">

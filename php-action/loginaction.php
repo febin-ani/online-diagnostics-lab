@@ -15,10 +15,8 @@ if (isset($_POST['login'])){
         // echo "Saved";
         $_SESSION['auname'] = $login_email;
         header('Location:../index.php');
-    }
-    else 
-    {
-        $_SESSION['status'] = "Email Id / Password is InValid";
+    } else {
+        $_SESSION['status'] = "Email Id / Password is Invalid";
         header('Location:../login.php');  
     }
 }
