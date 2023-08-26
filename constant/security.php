@@ -5,9 +5,9 @@ include('config.php');
 
 if(!$_SESSION['auname']){
 
-    header('location:./login.php');
+    header('location:admin/login.php');
 } 
 else {
-    $_SESSION['role'] = 'admin';
+    $_SESSION['role'] = 'user';
 }
 ?>
