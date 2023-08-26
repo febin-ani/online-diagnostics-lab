@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include('config.php');
+include('admin/constant/config.php');
 
 if(!$_SESSION['auname']){
 

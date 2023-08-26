@@ -19,13 +19,17 @@ if (isset($_POST['login'])){
 
         // echo "Saved";
         $_SESSION['auname'] = $login_email;
+        $_SESSION['usertype'] = $usertype;
         header('Location:../index.php');
 
     } elseif ($usertype == 'user') {
+        
 
         $_SESSION['auname'] = $login_email;
         $_SESSION['usertype'] = $usertype;
         header('Location:/online diagnostic lab/home.php');
+
+
 
     } else {
 
