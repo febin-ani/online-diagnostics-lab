@@ -1,5 +1,5 @@
 <?php
-include('../constant/config.php');
+include('../constant/security.php');
 
 
 if (isset($_POST['submit'])){

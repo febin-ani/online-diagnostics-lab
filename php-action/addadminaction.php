@@ -1,5 +1,5 @@
 <?php
-include('../constant/config.php');
+include('../constant/security.php');
 
 
 if (isset($_POST['register'])) {
@@ -7,6 +7,7 @@ if (isset($_POST['register'])) {
     $aemail=$_POST['aemail'];
     $apass=$_POST['apass'];
     $cpass=$_POST['cpass'];
+    $usertype=$_POST['usertype'];
 
     $email_query = "SELECT * FROM `tb_aregister` WHERE aemail='$aemail' ";
     $run = mysqli_query($conn, $email_query);
@@ -17,8 +18,8 @@ if (isset($_POST['register'])) {
         header('Location:../register.php');  
     } else {
         if($apass === $cpass){
-            $sql="INSERT INTO `tb_aregister`(`auname`,`aemail`,`apass`)
-            VALUES('$auname','$aemail','$apass')";
+            $sql="INSERT INTO `tb_aregister`(`auname`,`aemail`,`apass`,`usertype`)
+            VALUES('$auname','$aemail','$apass','$usertype')";
 
             $query=mysqli_query($conn,$sql);
 

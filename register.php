@@ -35,6 +35,7 @@
               <label>Confirm Password</label>
               <input type="password" name="cpass" class="form-control" placeholder="Confirm Password">
             </div>
+            <input type="hidden" name="usertype" value="admin">
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -71,6 +72,7 @@
                 <th scope="col">Username</th>
                 <th scope="col">Email</th>
                 <th scope="col">Password</th>
+                <th scope="col">Role</th>
                 <th scope="col">UPDATE</th>
                 <th scope="col">DELETE</th>
               </tr>
@@ -88,6 +90,7 @@
                       echo "<td>".$row['auname']."</td>";
                       echo "<td>".$row['aemail']."</td>";
                       echo "<td>".$row['apass']."</td>";
+                      echo "<td>".$row['usertype']."</td>";
                       echo "<td>";
                       ?>
                       <button  class="btn btn-success btn-sm">

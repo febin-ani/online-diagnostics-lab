@@ -35,6 +35,14 @@
       </li>
     </ul>
   </li><!-- End Test Nav -->
+
+  <li class="nav-item">
+    <a class="nav-link collapsed" href="appointment.php">
+      <i class="ri-nurse-line"></i>
+      <span>Appointment</span>
+    </a>
+  </li>
+  <!-- End Appointment Nav -->
 </ul>
 
 </aside><!-- End Sidebar-->
