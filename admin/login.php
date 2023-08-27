@@ -10,7 +10,7 @@
 				<div class="col-xxl-5 col-xl-4 col-lg-5 col-md-7 col-sm-9">
 					<div class="text-center mt-5 mb-3">
 						<img src="assets/img/apple-touch-icon.png" alt="logo" width="75">
-            			<p class="fs-6 card-title  mb-4 text-white">Avica Diagnostics Center</p> 
+            			<p class="fs-5 card-title  mb-4 text-white">Avica Diagnostics Center</p> 
 					</div>
 
 					<div class="card shadow-lg">
