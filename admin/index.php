@@ -20,6 +20,7 @@
 
 <div class="container">
     <div class="row ">
+        <!-- CARD 1 -->
         <div class="col-md-4 col-xl-3">
             <div class="card bg-c-blue order-card">
                 <div class="card-block">
@@ -37,10 +38,34 @@
                     ?>
                     </span>
                     </h2>
+                    <!-- <p class="m-b-0">Completed Orders<span class="f-right">351</span></p> -->
                 </div>
             </div>
         </div>
-        
+        <!-- CARD 2 -->
+        <div class="col-md-4 col-xl-3">
+            <div class="card bg-c-yellow order-card">
+                <div class="card-block">
+                    <h6 class="m-b-20">Total Client Users</h6>
+                    <h2 class="text-end"><i class="ri-empathize-fill f-left"></i>
+                    <span>
+                    <?php 
+                        include('constant/config.php');
+
+                        $sql = "SELECT aid FROM tb_aregister ORDER BY aid";
+
+                        $query = mysqli_query($conn,$sql);
+
+                        $row = mysqli_num_rows($query);
+                        echo $row;
+                    ?>
+                    </span>
+                    </h2>
+                    <!-- <p class="m-b-0">Completed Orders<span class="f-right">351</span></p> -->
+                </div>
+            </div>
+        </div>
+        <!-- CARD 3 -->
         <div class="col-md-4 col-xl-3">
             <div class="card bg-c-green order-card">
                 <div class="card-block">
@@ -58,46 +83,28 @@
                     ?>
                     </span>
                     </h2>
+                    <!-- <p class="m-b-0">Completed Orders<span class="f-right">351</span></p> -->
                 </div>
             </div>
         </div>
-        
-        <div class="col-md-4 col-xl-3">
-            <div class="card bg-c-yellow order-card">
-                <div class="card-block">
-                    <h6 class="m-b-20">Orders Received</h6>
-                    <h2 class="text-end"><i class="fa fa-refresh f-left"></i>
-                        <span>
-                        <!-- <?php 
-                            include('constant/config.php');
-
-                            $sql = "SELECT test_id FROM tb_test ORDER BY test_id";
-                            $query = mysqli_query($conn,$sql);
-
-                            $row = mysqli_num_rows($query);
-                            echo $row;
-                        ?> -->
-                        </span>
-                    </h2>
-                </div>
-            </div>
-        </div>
-        
+        <!-- CARD 4 -->
         <div class="col-md-4 col-xl-3">
             <div class="card bg-c-pink order-card">
                 <div class="card-block">
-                    <h6 class="m-b-20">Orders Received</h6>
+                    <h6 class="m-b-20">
+                        <!-- Title  -->
+                    </h6>
                     <h2 class="text-end"><i class="fa fa-credit-card f-left"></i>
                     <span>
-                    <!-- <?php 
+                    <?php 
                         include('constant/config.php');
 
-                        $sql = "SELECT test_id FROM tb_test ORDER BY test_id";
-                        $query = mysqli_query($conn,$sql);
+                        // $sql = query ;
+                        // $query = mysqli_query($conn,$sql);
 
-                        $row = mysqli_num_rows($query);
-                        echo $row;
-                    ?>   -->
+                        // $row = mysqli_num_rows($query);
+                        // echo $row;
+                    ?>
                     </span>
                     </h2>
                     <!-- <p class="m-b-0">Completed Orders<span class="f-right">351</span></p> -->
@@ -105,6 +112,106 @@
             </div>
         </div>
 	</div>
+<!-- SEPERATED -->
+    <div class="row ">
+        <!-- CARD 5 -->
+        <div class="col-md-4 col-xl-3">
+            <div class="card bg-c-orange order-card">
+                <div class="card-block">
+                    <h6 class="m-b-20">
+                        <!-- Title  -->
+                    </h6>
+                    <h2 class="text-end"><i class="fa fa-credit-card f-left"></i>
+                    <span>
+                    <?php 
+                        include('constant/config.php');
+
+                        // $sql = query ;
+                        // $query = mysqli_query($conn,$sql);
+
+                        // $row = mysqli_num_rows($query);
+                        // echo $row;
+                    ?>
+                    </span>
+                    </h2>
+                    <!-- <p class="m-b-0">Completed Orders<span class="f-right">351</span></p> -->
+                </div>
+            </div>
+        </div>
+        <!-- CARD 6 -->
+        <div class="col-md-4 col-xl-3">
+            <div class="card bg-c-violet order-card">
+                <div class="card-block">
+                    <h6 class="m-b-20">
+                        <!-- Title  -->
+                    </h6>
+                    <h2 class="text-end"><i class="fa fa-credit-card f-left"></i>
+                    <span>
+                    <?php 
+                        include('constant/config.php');
+
+                        // $sql = query ;
+                        // $query = mysqli_query($conn,$sql);
+
+                        // $row = mysqli_num_rows($query);
+                        // echo $row;
+                    ?>
+                    </span>
+                    </h2>
+                    <!-- <p class="m-b-0">Completed Orders<span class="f-right">351</span></p> -->
+                </div>
+            </div>
+        </div>
+        <!-- CARD 7 -->
+        <div class="col-md-4 col-xl-3">
+            <div class="card bg-c-darkpink order-card">
+                <div class="card-block">
+                    <h6 class="m-b-20">
+                        <!-- Title  -->
+                    </h6>
+                    <h2 class="text-end"><i class="fa fa-credit-card f-left"></i>
+                    <span>
+                    <?php 
+                        include('constant/config.php');
+
+                        // $sql = query ;
+                        // $query = mysqli_query($conn,$sql);
+
+                        // $row = mysqli_num_rows($query);
+                        // echo $row;
+                    ?>
+                    </span>
+                    </h2>
+                    <!-- <p class="m-b-0">Completed Orders<span class="f-right">351</span></p> -->
+                </div>
+            </div>
+        </div>
+        <!-- CARD 8 -->
+        <div class="col-md-4 col-xl-3">
+            <div class="card bg-c-darkviolet order-card">
+                <div class="card-block">
+                    <h6 class="m-b-20">
+                        <!-- Title  -->
+                    </h6>
+                    <h2 class="text-end"><i class="fa fa-credit-card f-left"></i>
+                    <span>
+                    <?php 
+                        include('constant/config.php');
+
+                        // $sql = query ;
+                        // $query = mysqli_query($conn,$sql);
+
+                        // $row = mysqli_num_rows($query);
+                        // echo $row;
+                    ?>
+                    </span>
+                    </h2>
+                    <!-- <p class="m-b-0">Completed Orders<span class="f-right">351</span></p> -->
+                </div>
+            </div>
+        </div>
+	</div>
+
 </div>
 
 

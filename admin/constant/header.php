@@ -51,6 +51,21 @@
       background: linear-gradient(45deg,#FF5370,#ff869a);
     }
     
+    .bg-c-orange {
+      background: linear-gradient(45deg,#FF7F40,#FFA973);
+    }
+    
+    .bg-c-violet {
+      background: linear-gradient(45deg,#D840FF,#DB73FF);
+    }
+
+    .bg-c-darkviolet {
+      background: linear-gradient(45deg,#5F40FF,#7773FF);
+    }
+
+    .bg-c-darkpink {
+      background: linear-gradient(45deg,#FF40A9,#FF73C7);
+    }
     
     .card {
       border-radius: 5px;
