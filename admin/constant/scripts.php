@@ -11,5 +11,5 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="https://common.olemiss.edu/_js/sweet-alert/sweet-alert.min.js"></script>
 

@@ -6,7 +6,12 @@ include('config.php');
 if(!$_SESSION['auname']){
 
     header('location:./login.php');
-} else {
-    $_SESSION['role'] = 'admin';
+} 
+
+if (isset($_SESSION['usertype']) && $_SESSION['usertype'] != 'admin'){
+    $_SESSION['access'] = "Access Denied!"; 
+    header('location:../home.php');
 }
+
 ?>
+

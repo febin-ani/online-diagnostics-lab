@@ -1,9 +1,25 @@
 <?php 
   include('constant/security.php');
   include('constant/topbar.php');
+  include('admin/constant/scripts.php');
 ?>
 
+<?php
+  if(isset($_SESSION['access']) && $_SESSION['access'] !=''){
+  echo "<script>
+      swal({
 
+        title: 'Access Denied';,
+        text: 'Here's my error message!',
+        type: 'error',
+        confirmButtonText: 'Cool'
+      });
+
+    </script>";
+    // echo '<h6 class=" text-justify text-bg-danger"> '.$_SESSION["access"].' </h6>';
+    unset($_SESSION['access']);
+  }
+?>
   
   <!-- Carousel -->
   <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
@@ -31,6 +47,7 @@
 
 </body>
 </html>
+
 
 
 

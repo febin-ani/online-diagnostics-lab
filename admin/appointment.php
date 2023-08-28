@@ -29,7 +29,7 @@
 
             <?php
               $i = 1;
-              $qry = $conn->query("SELECT * from `tb_appointment_list` where user_id ='{$_settings->userdata('user_id')}' order by unix_timestamp(date_created) desc ");
+              $qry = ;
 
               $res=mysqli_query($conn,"SELECT * FROM `tb_test`");
               
