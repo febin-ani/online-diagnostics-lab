@@ -30,7 +30,7 @@
                     <?php 
                         include('constant/config.php');
 
-                        $sql = "SELECT aid FROM tb_aregister ORDER BY aid";
+                        $sql = "SELECT aid FROM tb_aregister WHERE usertype = 'admin' ORDER BY aid";
                         $query = mysqli_query($conn,$sql);
 
                         $row = mysqli_num_rows($query);
@@ -52,7 +52,7 @@
                     <?php 
                         include('constant/config.php');
 
-                        $sql = "SELECT aid FROM tb_aregister ORDER BY aid";
+                        $sql = "SELECT aid FROM tb_aregister WHERE usertype = 'user' ORDER BY aid";
 
                         $query = mysqli_query($conn,$sql);
 
