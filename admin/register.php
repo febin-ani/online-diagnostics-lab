@@ -95,24 +95,19 @@
                       echo "<td>".$row['usertype']."</td>";
                       echo "<td>";
                       ?>
-                      <form action="update-admin.php" method="post">
-                        <input type="hidden" name="update_userid" value="<?php echo $row["aid"]; ?>">
                         <button type="submit" class="btn btn-success btn-sm" name = "user_update">
-                          <a class="link-light" href="update-admin.php?aid=<?php echo $row["aid"]; ?>">
+                          <a class="link-light" href="update_admin.php?aid=<?php echo $row["aid"]; ?>">
                           UPDATE
                         </button>
-                      </form>
                       <?php 
                         echo "</td>";
 
                         echo "<td>";
                       ?>
-                      <form action="modify/delete-admin.php " method="post">
-                        <input type="hidden" name="delete_userid" value="<?php echo $row["aid"]; ?>">
                         <button class="btn btn-danger btn-sm" name = "user_delete">
-                        <a class="link-light" href="modify/delete-admin.php?aid=<?php echo $row["aid"]; ?>">DELETE
+                        <a class="link-light" href="delete_admin.php?aid=<?php echo $row["aid"]; ?>">DELETE
                         </button>
-                      </form>
+                      
                       <?php
                       echo "</td>";
 

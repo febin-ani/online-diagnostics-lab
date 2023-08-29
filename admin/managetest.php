@@ -8,6 +8,11 @@
 
     <div class="pagetitle">
       <h1>View Test Details</h1>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+      <button  class="btn btn-primary">
+        <a class="link-light" href="addtest.php">Add New Test
+      </button> 
+      </div>
     </div><!-- End Page Title -->
 
     <?php
@@ -50,14 +55,16 @@
                       echo "<td>";
                       ?>
                       <button  class="btn btn-success btn-sm">
-                        <a class="link-light" href="modify/update-test.php?test_id=<?php echo $row["test_id"]; ?>">UPDATE</button>
+                        <a class="link-light" href="update-test.php?test_id=<?php echo $row["test_id"]; ?>">UPDATE
+                      </button>
                       <?php
                       echo "</td>";
 
                       echo "<td>";
                       ?>
                       <button class="btn btn-danger btn-sm">
-                        <a class="link-light" href="modify/delete-test.php?test_id=<?php echo $row["test_id"]; ?>">DELETE</button>
+                        <a class="link-light" href="delete-test.php?test_id=<?php echo $row["test_id"]; ?>">DELETE
+                      </button>
                       <?php
                       echo "</td>";
 
