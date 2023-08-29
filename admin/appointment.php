@@ -29,7 +29,6 @@
 
             <?php
               $i = 1;
-              $qry = ;
 
               $res=mysqli_query($conn,"SELECT * FROM `tb_test`");
               

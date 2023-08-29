@@ -50,11 +50,13 @@
     <div class="pagetitle">
       <h1>View Admin Details</h1>
       <!-- Button trigger modal -->
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addadminprofile">
-          Add Admin Profile
-      </button>  
+      <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addadminprofile">
+            Add Admin Profile
+        </button>  
+      </div>
     </div><!-- End Page Title -->
-
+    
     <?php
       if(isset($_SESSION['status']) && $_SESSION['status'] !=''){
         echo '<h6 class="text-danger"> '.$_SESSION["status"].' </h6>';
@@ -93,15 +95,24 @@
                       echo "<td>".$row['usertype']."</td>";
                       echo "<td>";
                       ?>
-                      <button  class="btn btn-success btn-sm">
-                        <a class="link-light" href="modify/update-admin.php?aid=<?php echo $row["aid"]; ?>">UPDATE</button>
-                      <?php
-                      echo "</td>";
+                      <form action="update-admin.php" method="post">
+                        <input type="hidden" name="update_userid" value="<?php echo $row["aid"]; ?>">
+                        <button type="submit" class="btn btn-success btn-sm" name = "user_update">
+                          <a class="link-light" href="update-admin.php?aid=<?php echo $row["aid"]; ?>">
+                          UPDATE
+                        </button>
+                      </form>
+                      <?php 
+                        echo "</td>";
 
-                      echo "<td>";
+                        echo "<td>";
                       ?>
-                      <button class="btn btn-danger btn-sm">
-                        <a class="link-light" href="modify/delete-admin.php?aid=<?php echo $row["aid"]; ?>">DELETE</button>
+                      <form action="modify/delete-admin.php " method="post">
+                        <input type="hidden" name="delete_userid" value="<?php echo $row["aid"]; ?>">
+                        <button class="btn btn-danger btn-sm" name = "user_delete">
+                        <a class="link-light" href="modify/delete-admin.php?aid=<?php echo $row["aid"]; ?>">DELETE
+                        </button>
+                      </form>
                       <?php
                       echo "</td>";
 
