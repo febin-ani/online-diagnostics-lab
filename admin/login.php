@@ -12,16 +12,8 @@
 						<img src="assets/img/apple-touch-icon.png" alt="logo" width="75">
             			<p class="fs-5 card-title  mb-4 text-white">Avica Diagnostics Center</p> 
 					</div>
-
-					<?php
-						if(isset($_SESSION['access']) && $_SESSION['access'] !=''){
-							echo '<h6 class=" text-justify text-bg-danger"> '.$_SESSION["access"].' </h6>';
-							unset($_SESSION['access']);
-						}
-					?>
-
-
 					<div class="card shadow-lg">
+
 						<div class="card-body p-3">
 							<h1 class="fs-5 card-title fw-bold mb-2">
 							<i class="ri-user-3-line"></i> Login
@@ -30,7 +22,7 @@
 							<form method="POST" action="php-action/loginaction.php" >
 								<div class="mb-3">
 									<label class="mb-2 text-muted" for="email">Email Address</label>
-									<input type="email" class="form-control" name="login_email" value="" required autofocus>
+									<input type="email" class="form-control" name="login_email"required autofocus>
 								</div>
 
 								<div class="mb-3">

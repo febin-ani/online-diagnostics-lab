@@ -11,5 +11,30 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
-  <script src="https://common.olemiss.edu/_js/sweet-alert/sweet-alert.min.js"></script>
+  
+  <script src="assets/js/sweetalert.min.js"></script>
 
+
+  <?php
+    if(isset($_SESSION['status']) && $_SESSION['status'] !=''){
+    ?>
+      <script>
+        swal({
+          title: "<?php echo $_SESSION['status']; ?>",
+          // text: "You clicked the button!",
+          icon: "<?php echo $_SESSION['status_code']; ?>",
+        });
+      </script>
+    <?php
+      unset($_SESSION['status']);
+    }
+  ?>
+
+
+  <!-- <script>
+    swal({
+      title: "Good job!",
+      text: "You clicked the button!",
+      icon: "success",
+    });
+  </script> -->

@@ -8,7 +8,7 @@ if (isset($_POST['login'])){
     $login_email=$_POST['login_email'];
     $login_pass=$_POST['login_pass'];
 
-    $sql = "SELECT * FROM tb_aregister WHERE aemail='$login_email' AND apass='$login_pass' ";
+    $sql = "SELECT * FROM tb_user WHERE email='$login_email' AND pass='$login_pass' ";
     $query = mysqli_query($conn,$sql);
 
     $usertypes = mysqli_fetch_array($query);
@@ -18,22 +18,22 @@ if (isset($_POST['login'])){
     if($usertype == 'admin') {
 
         // echo "Saved";
-        $_SESSION['auname'] = $login_email;
+        $_SESSION['username'] = $login_email;
         $_SESSION['usertype'] = $usertype;
         header('Location:../index.php');
 
     } elseif ($usertype == 'user') {
         
-
-        $_SESSION['auname'] = $login_email;
+        $_SESSION['username'] = $login_email;
         $_SESSION['usertype'] = $usertype;
         header('Location:/online diagnostic lab/home.php');
 
 
-
-    } else {
+    } 
+    else {
 
         $_SESSION['status'] = "Email Id / Password is Invalid";
+        $_SESSION['status_code'] = "error";
         header('Location:../login.php');  
     }
 }

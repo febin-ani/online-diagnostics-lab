@@ -15,14 +15,6 @@
       </div>
     </div><!-- End Page Title -->
 
-    <?php
-    
-      if(isset($_SESSION['status']) && $_SESSION['status'] !=''){
-        echo '<h6 class="text-danger"> '.$_SESSION["status"].' </h6>';
-        unset($_SESSION['status']);
-      }
-    ?>
-
     <section class="section">
       <div class="row">
         <div class="col-lg-12">

@@ -143,7 +143,7 @@
               <h6>
               Email id
               </h6>
-              <span> <?php echo $_SESSION['auname']; ?> </span>
+              <span> <?php echo $_SESSION['username']; ?> </span>
             </li>
             <li>
               <hr class="dropdown-divider">

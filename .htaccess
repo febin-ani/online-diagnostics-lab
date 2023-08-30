@@ -1,4 +1,4 @@
 
 # php 404 error page
 
-ErrorDocument 404 http://localhost/online%20diagnostic%20lab/404.php
+# ErrorDocument 404 http://localhost/online%20diagnostic%20lab/404.php

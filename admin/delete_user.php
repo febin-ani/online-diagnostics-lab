@@ -1,14 +1,14 @@
 <?php
 include_once('constant/security.php');
 
-$sql = "DELETE FROM tb_test WHERE test_id='" . $_GET["test_id"] . "'";
+$sql = "DELETE FROM tb_user WHERE id='" . $_GET["id"] . "'";
 
 if (mysqli_query($conn, $sql)) {
-    $_SESSION['status'] = "Test Deleted";
+    $_SESSION['status'] = "User Deleted";
     $_SESSION['status_code'] = "success";
-    header('location:managetest.php');
+    header('location:register.php');
 } else {
-    $_SESSION['status'] = "Test Not Deleted ";
+    $_SESSION['status'] = "User Not Deleted ";
     $_SESSION['status_code'] = "error";
     echo "Error deleting record: " . mysqli_error($conn);
 }

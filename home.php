@@ -1,16 +1,9 @@
 <?php 
   include('constant/securityhome.php');
   include('constant/topbar.php');
-  include('admin/constant/scripts.php');
+  include('constant/header.php');
 ?>
 
-<?php
-  if(isset($_SESSION['access']) && $_SESSION['access'] !=''){
-    echo '<h6 class=" text-justify text-bg-danger"> '.$_SESSION["access"].' </h6>';
-    unset($_SESSION['access']);
-  }
-?>
-  
   <!-- Carousel -->
   <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
@@ -38,6 +31,10 @@
 </body>
 </html>
 
+
+<?php 
+  include('admin/constant/scripts.php');
+?>
 
 
 
