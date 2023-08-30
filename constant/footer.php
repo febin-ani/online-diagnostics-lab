@@ -1,5 +1,5 @@
  <!-- ======= Footer ======= -->
- <footer id="footer" class="footer">
+ <footer class="footer">
     <div class="copyright">
       &copy;  All Rights Reserved
     </div>

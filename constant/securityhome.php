@@ -9,8 +9,6 @@ if(!$_SESSION['username']){
 } 
 
 if (isset($_SESSION['usertype']) && $_SESSION['usertype'] != 'user'){
-    $_SESSION['status'] = "Access Denied!"; 
-    $_SESSION['status_code'] = "error";
     header('location:admin/login.php');
 }
 

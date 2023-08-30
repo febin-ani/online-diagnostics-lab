@@ -3,23 +3,19 @@
   <div class="contact-info d-block py-1 text-center align-items-center text-light "
         style="background-color: rgba(71,69,136,255);">
     <i class="bi bi-phone"></i> +91 9947550817
-    <i class="ps-3 bi bi-envelope"></i> <a class="text-light" href="mailto:contactavica@gmail.com">contactavica@gmail.com</a>
+    <i class="ps-3 bi bi-envelope"></i> <a style="text-decoration:none" class="text-light" href="mailto:contactavica@gmail.com">contactavica@gmail.com</a>
   </div>
   <!-- Navbar -->
   <nav class="navbar navbar-dark bg-dark navbar-expand-lg ">
     <div class="container">
-      <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-        <img src="./admin/assets/img/apple-touch-icon.png" width="50">
+      <a href="home.php" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+        <img src="assets/img/apple-touch-icon.png" width="50">
         <h4 class="ps-2 pt-2">Avica Diagnostic Center</h4>
       </a>
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
-        <span class="navbar-toggler-icon"></span>
-      </button>
       
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav me-lg-auto mt-1 mb-2 mb-lg-0 mx-lg-5">
-          <li><a href="home.html" class="nav-link px-2 text-secondary">Home</a></li>
+          <li><a href="home.php" class="nav-link px-2 text-secondary">Home</a></li>
           <li>
             <a href="#" class="nav-link px-2 text-white">
               <span>Appointment</span>
