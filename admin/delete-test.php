@@ -1,5 +1,5 @@
 <?php
-include_once('constant/config.php');
+include_once('constant/security.php');
 
 $sql = "DELETE FROM tb_test WHERE test_id='" . $_GET["test_id"] . "'";
 

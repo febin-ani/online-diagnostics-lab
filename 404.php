@@ -1,6 +1,5 @@
 <?php 
-    include('constant/security.php');
-    include('constant/topbar.php');
+    include('constant/securityhome.php');
 ?> 
 
 <main>

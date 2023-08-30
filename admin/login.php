@@ -13,6 +13,14 @@
             			<p class="fs-5 card-title  mb-4 text-white">Avica Diagnostics Center</p> 
 					</div>
 
+					<?php
+						if(isset($_SESSION['access']) && $_SESSION['access'] !=''){
+							echo '<h6 class=" text-justify text-bg-danger"> '.$_SESSION["access"].' </h6>';
+							unset($_SESSION['access']);
+						}
+					?>
+
+
 					<div class="card shadow-lg">
 						<div class="card-body p-3">
 							<h1 class="fs-5 card-title fw-bold mb-2">
