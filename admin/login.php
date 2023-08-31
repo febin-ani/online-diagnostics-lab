@@ -18,6 +18,13 @@
 							<h1 class="fs-5 card-title fw-bold mb-2">
 							<i class="ri-user-3-line"></i> Login
 							</h1>
+							<?php
+								if(isset($_SESSION['success']) && $_SESSION['success'] !=''){
+									echo '<h6 class="text-success"> '.$_SESSION["success"].' </h6>';
+									unset($_SESSION['success']);
+								}
+							?>
+
 
 							<form method="POST" action="php-action/loginaction.php" >
 								<div class="mb-3">
@@ -32,10 +39,10 @@
 
 								
 								<?php
-								if(isset($_SESSION['status']) && $_SESSION['status'] !=''){
-									echo '<h6 class="text-danger"> '.$_SESSION["status"].' </h6>';
-									unset($_SESSION['status']);
-								}
+									if(isset($_SESSION['status']) && $_SESSION['status'] !=''){
+										echo '<h6 class="text-danger"> '.$_SESSION["status"].' </h6>';
+										unset($_SESSION['status']);
+									}
 								?>
 
 								
@@ -44,6 +51,10 @@
 									<button type="submit" name="login" class="btn btn-primary ms-auto">
 										Login
 									</button>
+								</div>
+
+								<div class="credits">
+									<h6 class="mb-2"> Don't Have An Account? <a class="link-primary" href="userregister.php">Sign Up</a> </h6>
 								</div>
 
 							</form>

@@ -7,12 +7,6 @@
 
 
 
-<?php 
-  include('constant/scripts.php');
-  include('constant/footer.php');
-?>
-
-
 
 
 

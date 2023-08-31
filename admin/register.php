@@ -16,7 +16,7 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <form action="php-action/addadminaction.php" method="POST">
+        <form action="php-action/adduseraction.php" method="POST">
           <div class="modal-body">
             <div class="form-group">
               <label> Username </label>
@@ -57,7 +57,7 @@
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <form action="php-action/addadminaction.php" method="POST">
+        <form action="php-action/adduseraction.php" method="POST">
           <div class="modal-body">
             <div class="form-group">
               <label> Username </label>
