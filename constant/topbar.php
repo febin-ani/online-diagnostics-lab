@@ -8,6 +8,7 @@
   
   <title>Home</title>
 
+
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -26,6 +27,7 @@
 <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
 <!-- Template Main CSS File -->
-<link href="/assets/css/style.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+
 
 </head>
