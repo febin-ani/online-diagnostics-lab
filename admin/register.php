@@ -136,9 +136,9 @@
                       echo "<td>".$row['usertype']."</td>";
                       echo "<td>";
                       ?>
-                        <button class="btn btn-success btn-sm" >
+                        <button class="btn btn-success btn-sm">
                           <a class="link-light" href="update_admin.php?id=<?php echo $row["id"]; ?>">
-                          UPDATE
+                          UPDATE</a>
                         </button>
                       <?php 
                         echo "</td>";
@@ -146,7 +146,7 @@
                         echo "<td>";
                       ?>
                         <button class="btn btn-danger btn-sm" >
-                          <a class="link-light" href="delete_user.php?id=<?php echo $row["id"]; ?>">DELETE
+                          <a class="link-light" href="delete.php?id=<?php echo $row["id"]; ?>">DELETE</a>
                         </button>
                       
                       <?php
