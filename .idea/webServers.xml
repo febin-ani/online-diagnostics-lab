@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="29833bc4-2cc4-4f7e-abc7-4dcfb5a0fbf0" name="Xampp" url="http://localhost/online diagnostic lab">
+        <fileTransfer mountedRoot="C:\xampp\htdocs\online diagnostic lab" accessType="MOUNT" port="0" />
+      </webServer>
+    </option>
+  </component>
+</project>

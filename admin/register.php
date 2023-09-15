@@ -137,7 +137,7 @@
                       echo "<td>";
                       ?>
                         <button class="btn btn-success btn-sm">
-                          <a class="link-light" href="update_admin.php?id=<?php echo $row["id"]; ?>">
+                          <a class="link-light" href="update.php?id=<?php echo $row["id"]; ?>">
                           UPDATE</a>
                         </button>
                       <?php 
