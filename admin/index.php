@@ -92,18 +92,18 @@
             <div class="card bg-c-pink order-card">
                 <div class="card-block">
                     <h6 class="m-b-20">
-                        <!-- Title  -->
+                        Active Appointment
                     </h6>
-                    <h2 class="text-end"><i class="fa fa-credit-card f-left"></i>
+                    <h2 class="text-end"><i class="ri-file-paper-2-fill f-left"></i>
                     <span>
                     <?php 
                         include('constant/config.php');
 
-                        // $sql = query ;
-                        // $query = mysqli_query($conn,$sql);
+                        $sql = "SELECT apt_id FROM tb_appointment_list ORDER BY apt_id";
+                        $query = mysqli_query($conn,$sql);
 
-                        // $row = mysqli_num_rows($query);
-                        // echo $row;
+                        $row = mysqli_num_rows($query);
+                        echo $row;
                     ?>
                     </span>
                     </h2>

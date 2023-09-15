@@ -7,7 +7,7 @@
 <main id="main" class="main">
     <section class="section">
       <div class="row">
-        <div class="col-lg-6">
+        <div class="mx-auto col-lg-6">
          <!-- Test Block -->
           <form class="row g-3" method="POST" action="php-action/addtestaction.php">
             <div class="card mb-4">

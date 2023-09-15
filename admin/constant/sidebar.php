@@ -13,7 +13,7 @@
   <li class="nav-item">
     <a class="nav-link collapsed" href="register.php">
       <i class="ri-nurse-line"></i>
-      <span>Manage Admin</span>
+      <span>Manage Users</span>
     </a>
   </li>
   <!-- End Admin Nav -->

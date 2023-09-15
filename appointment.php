@@ -9,8 +9,8 @@
     <section class="section mt-5">
         <div class="row">
             <div class="mt-5 mx-auto col-10 col-md-8 col-lg-6">
-            <form method="POST" action="useraction-php/process_appointment.php">
-                
+            <form class="row g-3" method="POST" action="useraction-php/process_appointment.php">
+                <div class="text-center fs-4 "><h4>Make Appointment</h4></div>
                 <div class="mb-3">
                     <label for="schedule" class="form-label">Appointment Date and Time:</label>
                     <input type="datetime-local" class="form-control" name="schedule" required>
@@ -39,8 +39,9 @@
                         ?>
                     </select>
                 </div>
-
+                
                 <button type="submit" class="btn btn-primary" name="create_appointment">Create Appointment</button>
+            </div>
             </form>
             </div>
         </div>
