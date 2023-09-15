@@ -146,7 +146,7 @@
                         echo "<td>";
                       ?>
                         <button class="btn btn-danger btn-sm" >
-                          <a class="link-light" href="delete.php?id=<?php echo $row["id"]; ?>">DELETE</a>
+                          <a class="link-light" href="delete.php?id=<?php echo $row["id"]; ?>">DELETE
                         </button>
                       
                       <?php
