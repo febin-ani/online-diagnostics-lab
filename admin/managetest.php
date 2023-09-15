@@ -43,7 +43,7 @@
                       // echo "<td>".$row['test_id']."</td>";
                       echo "<td>".$row['test_name']."</td>";
                       echo "<td>".$row['test_desc']."</td>";
-                      echo "<td>".''.$row['price']."</td>";
+                      echo "<td>".'₹'.$row['price']."</td>";
                       echo "<td>";
                       ?>
                       <button class="btn btn-success btn-sm">
