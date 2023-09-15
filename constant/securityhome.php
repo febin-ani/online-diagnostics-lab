@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include('admin/constant/config.php');
+include('config.php');
 
 if(!$_SESSION['username']){
 

@@ -31,8 +31,23 @@ if (isset($_GET["id"])) {
         $_SESSION['status_code'] = "error";
         echo "Error deleting test record: " . mysqli_error($conn);
     }
+} elseif (isset($_GET["apt_id"])) {
+    // For deleting appointment records
+    $apt_id = intval($_GET["apt_id"]);
+    
+    $sql = "DELETE FROM tb_appointment_list WHERE apt_id='" . $apt_id . "'";
+    
+    if (mysqli_query($conn, $sql)) {
+        $_SESSION['status'] = "Appointment Deleted";
+        $_SESSION['status_code'] = "success";
+        header('location: appointment.php');
+    } else {
+        $_SESSION['status'] = "Appointment Not Deleted";
+        $_SESSION['status_code'] = "error";
+        echo "Error deleting appointment record: " . mysqli_error($conn);
+    }
 } else {
-    // Handle the case when neither "id" nor "test_id" is provided
+    // Handle the case when either of the isset is not provided
     $_SESSION['status'] = "ID not provided";
     $_SESSION['status_code'] = "error";
     header('location: index.php'); 

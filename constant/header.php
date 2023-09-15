@@ -26,7 +26,7 @@
           <li><a href="#about" class="nav-link px-2 text-white">About</a></li>
         </ul>
         
-        <a href="#appointment" class="appointment-btn scrollto">
+        <a href="appointment.php" class="appointment-btn scrollto">
           <span class="d-none d-md-inline">Make an </span>Appointment
         </a>
 

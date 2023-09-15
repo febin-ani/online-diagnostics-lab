@@ -14,17 +14,20 @@ if (isset($_POST['login'])){
     $usertypes = mysqli_fetch_array($query);
 
     $usertype = $usertypes['usertype'];
+    $user_id = $usertypes['id'];
 
     if($usertype == 'admin') {
 
         // echo "Saved";
         $_SESSION['username'] = $login_email;
+        $_SESSION['id'] = $user_id;
         $_SESSION['usertype'] = $usertype;
         header('Location:../index.php');
 
     } elseif ($usertype == 'user') {
         
         $_SESSION['username'] = $login_email;
+        $_SESSION['id'] = $user_id;
         $_SESSION['usertype'] = $usertype;
         header('Location:/online diagnostic lab/home.php');
 
