@@ -48,6 +48,7 @@
                       ?>
                       <button class="btn btn-success btn-sm">
                         <a class="link-light" href="update.php?test_id=<?php echo $row["test_id"]; ?>">UPDATE</a>
+                        <a class="link-light" href="update-test.php?test_id=<?php echo $row["test_id"]; ?>">UPDATE</a>
                       </button>
                       <?php
                       echo "</td>";

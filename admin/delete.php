@@ -47,6 +47,7 @@ if (isset($_GET["id"])) {
         echo "Error deleting appointment record: " . mysqli_error($conn);
     }
 } else {
+    
     // Handle the case when either of the isset is not provided
     $_SESSION['status'] = "ID not provided";
     $_SESSION['status_code'] = "error";
