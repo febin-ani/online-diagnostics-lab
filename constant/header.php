@@ -29,8 +29,9 @@
         <a href="appointment.php" class="appointment-btn scrollto">
           <span class="d-none d-md-inline">Make an </span>Appointment
         </a>
-
-
+        <?php
+        if(isset($_SESSION['usertype'])){
+        ?>
         <div class="nav-item dropdown ps-2">
           <a class=" d-flex nav-link align-items-center pe-0" data-bs-toggle="dropdown" >
             <img src="https://github.com/febin-ani.png" width="40" alt="Profile" class="rounded-circle">
@@ -90,6 +91,23 @@
   
           </ul>
         </div>
+      <?php
+        }
+        else{
+      ?>
+       
+        <a href="admin/login.php" class="appointment-btn scrollto">
+          <span class="d-none d-md-inline">Register</span>
+        </a>
+        <a href="admin/login.php" class="appointment-btn scrollto">
+          <span class="d-none d-md-inline">Login </span>
+        </a>
+
+      <?php
+        }
+        ?>
+
+
       </div>
         
     </div>

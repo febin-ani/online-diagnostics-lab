@@ -13,7 +13,7 @@
                 <div class="text-center fs-4 "><h4>Make Appointment</h4></div>
                 <div class="mb-3">
                     <label for="schedule" class="form-label">Appointment Date and Time:</label>
-                    <input type="datetime-local" class="form-control" name="schedule" required>
+                    <input type="date" class="form-control" name="schedule" required>
                 </div>
 
                 <div class="mb-3">
@@ -40,8 +40,21 @@
                     </select>
                 </div>
                 
+                <?php
+                    if (isset($_SESSION['id'])) {
+
+                ?>
                 <button type="submit" class="btn btn-primary" name="create_appointment">Create Appointment</button>
+            
+                <?php
+                    } else {
+                ?>
+                        <a href="admin/login.php" class="btn btn-primary" name="create_appointment">Create Appointment</a>
+                <?php
+                    }
+                ?>
             </div>
+
             </form>
             </div>
         </div>

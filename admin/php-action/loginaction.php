@@ -29,7 +29,7 @@ if (isset($_POST['login'])){
         $_SESSION['username'] = $login_email;
         $_SESSION['id'] = $user_id;
         $_SESSION['usertype'] = $usertype;
-        header('Location:/online diagnostic lab/home.php');
+        header('Location:../../home.php');
 
 
     } 
