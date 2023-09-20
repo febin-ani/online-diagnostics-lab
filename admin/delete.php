@@ -5,14 +5,14 @@ if (isset($_GET["id"])) {
     // For deleting admin records
     $id = intval($_GET["id"]);
     
-    $sql = "DELETE FROM tb_admin WHERE id='" . $id . "'";
+    $sql = "DELETE FROM tb_user WHERE id='" . $id . "'";
     
     if (mysqli_query($conn, $sql)) {
-        $_SESSION['status'] = "Admin Deleted";
+        $_SESSION['status'] = "User Deleted";
         $_SESSION['status_code'] = "success";
         header('location: register.php');
     } else {
-        $_SESSION['status'] = "Admin Not Deleted";
+        $_SESSION['status'] = "User Not Deleted";
         $_SESSION['status_code'] = "error";
         echo "Error deleting admin record: " . mysqli_error($conn);
     }

@@ -20,7 +20,7 @@
                 <th scope="col">Appointment Code</th>
                 <th scope="col">User Name</th>
                 <th scope="col">Tests Name</th>
-                <th scope="col">Appointment Date</th>
+                <th scope="col">Appointment Date & Time</th>
                 <th scope="col">Status</th>
                 <th scope="col">UPDATE | DELETE</th>
               </tr>

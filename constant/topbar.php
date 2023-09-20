@@ -29,5 +29,31 @@
 <!-- Template Main CSS File -->
 <link href="assets/css/style.css" rel="stylesheet">
 
+<style>
+  .appt-btn {
+  margin-left: 20px;
+  background: rgb(red, green, blue);
+  color: #ffffff;
+  border-radius: 7px;
+  padding: 8px 25px;
+  white-space: nowrap;
+  transition: 0.3s;
+  font-size: 16px;
+  display: inline-block;
+  }
+
+  .appt-btn:hover {
+    background: rgb(102, 100, 173);
+    color: #fff;
+  }
+
+  @media (max-width: 768px) {
+    .appt-btn {
+      margin: 0 15px 0 0;
+      padding: 6px 18px;
+    }
+  }
+
+</style>
 
 </head>

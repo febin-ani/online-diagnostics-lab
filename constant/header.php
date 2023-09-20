@@ -21,8 +21,8 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav me-lg-auto mt-1 mb-2 mb-lg-0 mx-lg-5">
           <li><a href="home.php" class="nav-link px-2 text-secondary">Home</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+          <!-- <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li> -->
+          <li><a href="#why-us" class="nav-link px-2 text-white">Why Us</a></li>
           <li><a href="#about" class="nav-link px-2 text-white">About</a></li>
         </ul>
         
@@ -96,10 +96,10 @@
         else{
       ?>
        
-        <a href="admin/login.php" class="appointment-btn scrollto">
+        <a href="admin/userregister.php" class="mx-3 btn btn-danger scrollto">
           <span class="d-none d-md-inline">Register</span>
         </a>
-        <a href="admin/login.php" class="appointment-btn scrollto">
+        <a href="admin/login.php" class="btn btn-primary scrollto">
           <span class="d-none d-md-inline">Login </span>
         </a>
 

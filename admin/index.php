@@ -115,11 +115,11 @@
 <!-- SEPERATED -->
     <div class="row ">
         <!-- CARD 5 -->
-        <div class="col-md-4 col-xl-3">
+        <!-- <div class="col-md-4 col-xl-3">
             <div class="card bg-c-orange order-card">
                 <div class="card-block">
                     <h6 class="m-b-20">
-                        <!-- Title  -->
+                        Title
                     </h6>
                     <h2 class="text-end"><i class="fa fa-credit-card f-left"></i>
                     <span>
@@ -134,16 +134,16 @@
                     ?>
                     </span>
                     </h2>
-                    <!-- <p class="m-b-0">Completed Orders<span class="f-right">351</span></p> -->
+                    <p class="m-b-0">Completed Orders<span class="f-right">351</span></p>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- CARD 6 -->
-        <div class="col-md-4 col-xl-3">
+        <!-- <div class="col-md-4 col-xl-3">
             <div class="card bg-c-violet order-card">
                 <div class="card-block">
                     <h6 class="m-b-20">
-                        <!-- Title  -->
+                         Title 
                     </h6>
                     <h2 class="text-end"><i class="fa fa-credit-card f-left"></i>
                     <span>
@@ -158,16 +158,16 @@
                     ?>
                     </span>
                     </h2>
-                    <!-- <p class="m-b-0">Completed Orders<span class="f-right">351</span></p> -->
+                    <p class="m-b-0">Completed Orders<span class="f-right">351</span></p> 
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- CARD 7 -->
-        <div class="col-md-4 col-xl-3">
+        <!-- <div class="col-md-4 col-xl-3">
             <div class="card bg-c-darkpink order-card">
                 <div class="card-block">
                     <h6 class="m-b-20">
-                        <!-- Title  -->
+                        Title 
                     </h6>
                     <h2 class="text-end"><i class="fa fa-credit-card f-left"></i>
                     <span>
@@ -182,16 +182,16 @@
                     ?>
                     </span>
                     </h2>
-                    <!-- <p class="m-b-0">Completed Orders<span class="f-right">351</span></p> -->
+                    <p class="m-b-0">Completed Orders<span class="f-right">351</span></p>
                 </div>
             </div>
-        </div>
+        </div> -->
         <!-- CARD 8 -->
-        <div class="col-md-4 col-xl-3">
+        <!-- <div class="col-md-4 col-xl-3">
             <div class="card bg-c-darkviolet order-card">
                 <div class="card-block">
                     <h6 class="m-b-20">
-                        <!-- Title  -->
+                        Title
                     </h6>
                     <h2 class="text-end"><i class="fa fa-credit-card f-left"></i>
                     <span>
@@ -206,10 +206,10 @@
                     ?>
                     </span>
                     </h2>
-                    <!-- <p class="m-b-0">Completed Orders<span class="f-right">351</span></p> -->
+                    <p class="m-b-0">Completed Orders<span class="f-right">351</span></p>
                 </div>
             </div>
-        </div>
+        </div> -->
 	</div>
 
 </div>
