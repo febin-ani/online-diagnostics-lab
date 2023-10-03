@@ -13,7 +13,7 @@
                 <div class="text-center fs-4 "><h4>Make Appointment</h4></div>
                 <div class="mb-3">
                     <label for="schedule" class="form-label">Appointment Date and Time:</label>
-                    <input type="datetime-local" class="form-control" name="schedule" required>
+                    <input type="datetime-local" class="form-control" name="schedule" min="<?php echo date('Y-m-d\TH:i'); ?>" required>
                     
                 </div>
 

@@ -25,10 +25,20 @@
           <li><a href="#why-us" class="nav-link px-2 text-white">Why Us</a></li>
           <li><a href="#about" class="nav-link px-2 text-white">About</a></li>
         </ul>
-        
-        <a href="appointment.php" class="appointment-btn scrollto">
+
+        <a href="viewappointment.php" class="appointment-btn scrollto">
           <span class="d-none d-md-inline">Make an </span>Appointment
         </a>
+      <?php
+      if(isset($_SESSION['usertype'])){
+      ?>
+        <a href="viewappointment.php" class="appointment-btn scrollto">
+          <span class="d-none d-md-inline">View </span>Appointment
+        </a>
+      <?php
+      }
+      ?>
+
         <?php
         if(isset($_SESSION['usertype'])){
         ?>
