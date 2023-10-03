@@ -4,9 +4,6 @@
   include('constant/header.php');
 ?>
 
-
-    
-
     <section class="section">
     
       <div class="row">
