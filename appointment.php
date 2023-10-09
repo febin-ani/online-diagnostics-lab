@@ -9,12 +9,11 @@
     <section class="section mt-5">
         <div class="row">
             <div class="mt-5 mx-auto col-10 col-md-8 col-lg-6">
-            <form class="row g-3" method="POST" action="useraction-php/process_appointment.php">
+            <form class="row g-3" method="POST" action="useraction-php/process_appointment.php" enctype="multipart/form-data">
                 <div class="text-center fs-4 "><h4>Make Appointment</h4></div>
                 <div class="mb-3">
                     <label for="schedule" class="form-label">Appointment Date and Time:</label>
                     <input type="datetime-local" class="form-control" name="schedule" min="<?php echo date('Y-m-d\TH:i'); ?>" required>
-                    
                 </div>
 
                 <div class="mb-3">
@@ -41,6 +40,11 @@
                     </select>
                 </div>
                 
+                <div class="mb-3">
+                    <label for="pres" class="form-label">Prescription</label>
+                    <input type="file" class="form-control" name="pres">
+                </div>       
+
                 <?php
                     if (isset($_SESSION['id'])) {
 

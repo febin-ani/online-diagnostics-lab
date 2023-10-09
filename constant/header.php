@@ -13,7 +13,7 @@
   <!-- Navbar -->
   <nav class="navbar navbar-dark bg-dark navbar-expand-lg ">
     <div class="container">
-      <a href="home.php" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+      <a href="home.php" class="d-flex align-items-center mb-2 mb-lg-0 text-light text-decoration-none">
         <img src="assets/img/apple-touch-icon.png" width="50">
         <h4 class="ps-2 pt-2">Avica Diagnostic Center</h4>
       </a>
@@ -21,9 +21,9 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav me-lg-auto mt-1 mb-2 mb-lg-0 mx-lg-5">
           <li><a href="home.php" class="nav-link px-2 text-secondary">Home</a></li>
-          <!-- <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li> -->
-          <li><a href="#why-us" class="nav-link px-2 text-white">Why Us</a></li>
-          <li><a href="#about" class="nav-link px-2 text-white">About</a></li>
+          <!-- <li><a href="#" class="nav-link px-2 text-light">Pricing</a></li> -->
+          <li><a href="#lights" class="nav-link px-2 text-light">lights</a></li>
+          <li><a href="#about" class="nav-link px-2 text-light">About</a></li>
         </ul>
 
         <a href="appointment.php" class="appointment-btn scrollto">
@@ -45,7 +45,7 @@
         <div class="nav-item dropdown ps-2">
           <a class=" d-flex nav-link align-items-center pe-0" data-bs-toggle="dropdown" >
             <img src="https://github.com/febin-ani.png" width="40" alt="Profile" class="rounded-circle">
-            <span class="d-none d-md-block dropdown-toggle ps-2 text-white text-decoration-none" >
+            <span class="d-none d-md-block dropdown-toggle ps-2 text-light text-decoration-none" >
             <?php echo "<span class='text-uppercase'>" .$_SESSION['usertype']. "</span>"; ?> 
             </span>
           </a><!-- End Profile Iamge Icon -->
@@ -106,10 +106,10 @@
         else{
       ?>
        
-        <a href="admin/userregister.php" class="mx-3 btn btn-danger scrollto">
+        <a href="admin/userregister.php" class="mx-3 btn btn-outline-light btn-sm scrollto">
           <span class="d-none d-md-inline">Register</span>
         </a>
-        <a href="admin/login.php" class="btn btn-primary scrollto">
+        <a href="admin/login.php" class="btn btn-outline-light btn-sm scrollto">
           <span class="d-none d-md-inline">Login </span>
         </a>
 

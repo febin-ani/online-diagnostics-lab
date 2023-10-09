@@ -21,8 +21,10 @@
                 <th scope="col">User Name</th>
                 <th scope="col">Tests Name</th>
                 <th scope="col">Appointment Date & Time</th>
+                <th scope="col">Prescription</th>
                 <th scope="col">Status</th>
                 <th scope="col">UPDATE | DELETE</th>
+               
               </tr>
             </thead>
             <tbody>
@@ -33,7 +35,7 @@
                           al.code AS appointment_code,
                           u.username AS user_name,
                           t.test_name AS test_name,
-                          al.schedule, al.status ,al.apt_id
+                          al.schedule, al.status ,al.apt_id , al.pres
                       FROM
                           tb_appointment_list al
                       JOIN
@@ -51,8 +53,11 @@
                   echo '<td>' . $row["user_name"] . '</td>';
                   echo '<td>' . $row["test_name"] . '</td>';
                   echo '<td>' . $row["schedule"] . '</td>';
+                  echo "<td>" ?> <a class="d-flex justify-content-center link-dark" href=<?php echo "../assets/upload/".$row["pres"]; ?> >
+                  <i class="ri-eye-fill"></i>
+                  </a> <?php "</td>";
                   echo "<td>" . $row['status'] . "</td>";
-
+                  
                   echo "<td>";
                     ?>
                     <button class="btn btn-success btn-sm">
