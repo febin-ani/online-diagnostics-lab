@@ -23,6 +23,7 @@
                 <th scope="col">Appointment Date & Time</th>
                 <th scope="col">Prescription</th>
                 <th scope="col">Status</th>
+                <th scope="col">UPDATE</th>
                 <th scope="col">DELETE</th>
                
               </tr>
@@ -85,9 +86,14 @@
                   // Upadte | Delete
                   echo "<td>";
                     ?>
-                    <!-- <button class="btn btn-success btn-sm">
+                    <button class="btn btn-success btn-sm">
                       <a class="link-light" href="update.php?apt_id=<?php echo $row["apt_id"]; ?>">UPDATE</a>
-                    </button> -->
+                    </button>
+                  
+                    <?php
+                    echo "</td>";
+                    echo "<td>";
+                    ?>
                     
                     <button class="btn btn-danger btn-sm">
                       <a class="link-light" href="delete.php?apt_id=<?php echo $row["apt_id"]; ?>">DELETE</a>

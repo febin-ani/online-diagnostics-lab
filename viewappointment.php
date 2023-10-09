@@ -4,9 +4,9 @@
   include('constant/header.php');
 ?>
 
-    <section class="section">
+  <section class="section">
     
-      <div class="row">
+    <div class="row">
         <div class="col-lg-12 mt-5">
 
     
@@ -26,74 +26,80 @@
         <tbody>
 
         <?php
-            // Retrieve appointment data from tb_appointment_list table
-            $sql = "SELECT 
-                        al.code AS appointment_code,
-                        u.username AS user_name,
-                        t.test_name AS test_name,
-                        al.schedule, al.status ,al.apt_id ,al.pres
-                    FROM
-                        tb_appointment_list al
-                    JOIN
-                        tb_user u ON al.user_id = u.id
-                    JOIN
-                        tb_test t ON al.test_id = t.test_id;";
+          $id = $_SESSION['id'];
+          // Retrieve appointment data from tb_appointment_list table
+          $sql = "SELECT 
+                      al.code AS appointment_code,
+                      u.username AS user_name,
+                      t.test_name AS test_name,
+                      al.schedule,
+                      al.status,
+                      al.apt_id,
+                      al.pres 
+                  FROM
+                      tb_appointment_list al
+                  JOIN
+                      tb_user u ON al.user_id = u.id
+                  JOIN
+                      tb_test t ON al.test_id = t.test_id
+                  WHERE
+                      u.id = '$id'";
 
-            $result = $conn->query($sql);
+          $result = $conn->query($sql);
 
-            if ($result->num_rows > 0) {
-                // Output data of each row
+          if ($result->num_rows > 0) {
+              // Output data of each row
             while ($row = $result->fetch_assoc()) {
-                echo '<tr class="text-center " >';
-                echo '<td>' . $row["appointment_code"] . '</td>';
-                echo '<td>' . $row["user_name"] . '</td>';
-                echo '<td>' . $row["test_name"] . '</td>';
-                echo '<td>' . $row["schedule"] . '</td>';
-                // Prescription
-                echo "<td>" ?> 
-                <?php
-                $pres=$row["pres"];
-                if($pres!==""){
-                ?>
-                  <a class="d-flex justify-content-center link-dark" href=<?php echo "assets/upload/".$row["pres"]; ?> >  <i class="ri-eye-fill"></i></a>
-                <?php
-                } else {
-                ?>
-                  <i  class="ri-eye-off-fill d-flex justify-content-center "></i>
-                <?php
-                }
+              echo '<tr class="text-center " >';
+              echo '<td>' . $row["appointment_code"] . '</td>';
+              echo '<td>' . $row["user_name"] . '</td>';
+              echo '<td>' . $row["test_name"] . '</td>';
+              echo '<td>' . $row["schedule"] . '</td>';
+              // Prescription
+              echo "<td>" ?> 
+              <?php
+              $pres=$row["pres"];
+              if($pres!==""){
+              ?>
+                <a class="d-flex justify-content-center link-dark" href=<?php echo "assets/upload/".$row["pres"]; ?> >  <i class="ri-eye-fill"></i></a>
+              <?php
+              } else {
+              ?>
+                <i  class="ri-eye-off-fill d-flex justify-content-center "></i>
+              <?php
+              }
+              "</td>";
+              // Status
+              echo "<td>" ?> 
+                                  
+              <?php
+              $status=$row['status'];
+              if($status==0){
+              ?>
+                Pending
+              <?php
+              } else {
+              ?>
+                Completed
+              <?php
+              }
                 "</td>";
-                // Status
-                echo "<td>" ?> 
-                                    
-                <?php
-                $status=$row['status'];
-                if($status==0){
-                ?>
-                  Pending
-                <?php
-                } else {
-                ?>
-                  Completed
-                <?php
-                }
-                 "</td>";
-                echo "</tr>";
+              echo "</tr>";
             }
-            } else { ?>
-            <div class="alert alert-danger alert-dismissible fade show" role="alert">
-            <?php echo 'No Records Found' ?>
-            <!-- <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> -->
-            </div>
-                <?php
-            }
-            ?>
-            </tbody>
-          </table>
-          <!-- End Table with stripped rows -->
-        </div>
+          } else { ?>
+          <div class="alert alert-danger alert-dismissible fade show" role="alert">
+          <?php echo 'No Records Found' ?>
+          <!-- <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button> -->
+          </div>
+              <?php
+          }
+          ?>
+        </tbody>
+      </table>
+      <!-- End Table with stripped rows -->
       </div>
-    </section>
+    </div>
+  </section>
 
   </main><!-- End #main -->
 
