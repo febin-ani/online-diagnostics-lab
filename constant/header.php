@@ -22,7 +22,7 @@
         <ul class="navbar-nav me-lg-auto mt-1 mb-2 mb-lg-0 mx-lg-5">
           <li><a href="home.php" class="nav-link px-2 text-secondary">Home</a></li>
           <!-- <li><a href="#" class="nav-link px-2 text-light">Pricing</a></li> -->
-          <li><a href="#lights" class="nav-link px-2 text-light">lights</a></li>
+          <li><a href="#why-us" class="nav-link px-2 text-light">Why Us</a></li>
           <li><a href="#about" class="nav-link px-2 text-light">About</a></li>
         </ul>
 
