@@ -48,9 +48,21 @@
                 echo '<td>' . $row["user_name"] . '</td>';
                 echo '<td>' . $row["test_name"] . '</td>';
                 echo '<td>' . $row["schedule"] . '</td>';
-                echo "<td>" . $row['status'] . "</td>";
-
-                
+                // Status
+                echo "<td>" ?> 
+                                    
+                <?php
+                $status=$row['status'];
+                if($status==0){
+                ?>
+                  Pending
+                <?php
+                } else {
+                ?>
+                  Completed
+                <?php
+                }
+                 "</td>";
                 echo "</tr>";
             }
             } else { ?>

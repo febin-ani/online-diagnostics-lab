@@ -13,7 +13,6 @@ if (isset($_POST['create_appointment'])) {
     $schedule = $_POST['schedule'];
     $test_id = $_POST['test_id'];
     $pres = $_FILES['pres']['name'];
-    
 
     // Generate the appointment code
     $appointment_code = generateAppointmentCode($conn);

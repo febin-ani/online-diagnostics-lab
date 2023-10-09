@@ -40,6 +40,8 @@
                     </select>
                 </div>
                 
+                <input type="text" name="status" >
+
                 <div class="mb-3">
                     <label for="pres" class="form-label">Prescription</label>
                     <input type="file" class="form-control" name="pres">
