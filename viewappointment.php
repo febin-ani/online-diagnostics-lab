@@ -14,11 +14,12 @@
 
         <table class="table">
         <thead>
-            <tr>
+            <tr class="text-center ">
             <th scope="col">Appointment Code</th>
             <th scope="col">User Name</th>
             <th scope="col">Tests Name</th>
             <th scope="col">Appointment Date & Time</th>
+            <th scope="col">Prescription</th>
             <th scope="col">Status</th>
             </tr>
         </thead>
@@ -30,7 +31,7 @@
                         al.code AS appointment_code,
                         u.username AS user_name,
                         t.test_name AS test_name,
-                        al.schedule, al.status ,al.apt_id
+                        al.schedule, al.status ,al.apt_id ,al.pres
                     FROM
                         tb_appointment_list al
                     JOIN
@@ -43,11 +44,25 @@
             if ($result->num_rows > 0) {
                 // Output data of each row
             while ($row = $result->fetch_assoc()) {
-                echo '<tr>';
+                echo '<tr class="text-center " >';
                 echo '<td>' . $row["appointment_code"] . '</td>';
                 echo '<td>' . $row["user_name"] . '</td>';
                 echo '<td>' . $row["test_name"] . '</td>';
                 echo '<td>' . $row["schedule"] . '</td>';
+                // Prescription
+                echo "<td>" ?> 
+                <?php
+                $pres=$row["pres"];
+                if($pres!==""){
+                ?>
+                  <a class="d-flex justify-content-center link-dark" href=<?php echo "assets/upload/".$row["pres"]; ?> >  <i class="ri-eye-fill"></i></a>
+                <?php
+                } else {
+                ?>
+                  <i  class="ri-eye-off-fill d-flex justify-content-center "></i>
+                <?php
+                }
+                "</td>";
                 // Status
                 echo "<td>" ?> 
                                     

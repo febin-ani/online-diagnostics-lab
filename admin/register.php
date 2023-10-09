@@ -110,7 +110,7 @@
         <div class="col-lg-12">    
           <table class="table">
             <thead>
-              <tr>
+              <tr class="text-center">
                 <!-- <th scope="col">Test ID</th> -->
                 <th scope="col">Username</th>
                 <th scope="col">Email</th>
@@ -128,7 +128,7 @@
               
               if (mysqli_num_rows($res) > 0 ) {
                   while($row=mysqli_fetch_array($res)){
-                      echo "<tr>";
+                      echo "<tr class='text-center'>";
                       // echo "<td>".$row['id']."</td>";
                       echo "<td>".$row['username']."</td>";
                       echo "<td>".$row['email']."</td>";

@@ -16,7 +16,7 @@
 
           <table class="table">
             <thead>
-              <tr>
+              <tr class="text-center ">
                 <th scope="col">Appointment Code</th>
                 <th scope="col">User Name</th>
                 <th scope="col">Tests Name</th>
@@ -48,7 +48,7 @@
               if ($result->num_rows > 0) {
                   // Output data of each row
                 while ($row = $result->fetch_assoc()) {
-                  echo '<tr>';
+                  echo '<tr class="text-center ">';
                   echo '<td>' . $row["appointment_code"] . '</td>';
                   echo '<td>' . $row["user_name"] . '</td>';
                   echo '<td>' . $row["test_name"] . '</td>';
@@ -66,11 +66,9 @@
                     <i  class="ri-eye-off-fill d-flex justify-content-center "></i>
                   <?php
                   }
-                  ?>
-                  <?php "</td>";
+                  "</td>";
                   // Status
-                  echo "<td>" ?> 
-                                    
+                  echo "<td>" ?>                 
                   <?php
                   $status=$row['status'];
                   if($status==0){

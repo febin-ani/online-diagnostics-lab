@@ -21,7 +21,7 @@
 
           <table class="table">
             <thead>
-              <tr>
+              <tr class="text-center">
                 <!-- <th scope="col">Test ID</th> -->
                 <th scope="col">Test Name</th>
                 <th scope="col">Test Description</th>
@@ -39,7 +39,7 @@
               
               if (mysqli_num_rows($res) > 0 ) {
                   while($row=mysqli_fetch_array($res)){
-                      echo "<tr>";
+                      echo "<tr class='text-center'>";
                       // echo "<td>".$row['test_id']."</td>";
                       echo "<td>".$row['test_name']."</td>";
                       echo "<td>".$row['test_desc']."</td>";

@@ -21,7 +21,7 @@
 <div class="container">
     <div class="row ">
         <!-- CARD 1 -->
-        <div class="col-md-4 col-xl-3">
+        <div class="col-md-4 col-xl-4">
             <div class="card bg-c-blue order-card">
                 <div class="card-block">
                     <h6 class="m-b-20">Total Admin Users</h6>
@@ -43,7 +43,7 @@
             </div>
         </div>
         <!-- CARD 2 -->
-        <div class="col-md-4 col-xl-3">
+        <div class="col-md-4 col-xl-4">
             <div class="card bg-c-yellow order-card">
                 <div class="card-block">
                     <h6 class="m-b-20">Total Client Users</h6>
@@ -66,7 +66,7 @@
             </div>
         </div>
         <!-- CARD 3 -->
-        <div class="col-md-4 col-xl-3">
+        <div class="col-md-4 col-xl-4">
             <div class="card bg-c-green order-card">
                 <div class="card-block">
                     <h6 class="m-b-20">Total Tests</h6>
@@ -87,8 +87,11 @@
                 </div>
             </div>
         </div>
+        </div>
+<!-- SEPERATED -->
+    <div class="row ">
         <!-- CARD 4 -->
-        <div class="col-md-4 col-xl-3">
+        <div class="col-md-4 col-xl-4">
             <div class="card bg-c-pink order-card">
                 <div class="card-block">
                     <h6 class="m-b-20">
@@ -111,59 +114,58 @@
                 </div>
             </div>
         </div>
-	</div>
-<!-- SEPERATED -->
-    <div class="row ">
         <!-- CARD 5 -->
-        <!-- <div class="col-md-4 col-xl-3">
+        <div class="col-md-4 col-xl-4">
             <div class="card bg-c-orange order-card">
                 <div class="card-block">
                     <h6 class="m-b-20">
-                        Title
+                        Pending  Appointment
                     </h6>
-                    <h2 class="text-end"><i class="fa fa-credit-card f-left"></i>
+                    <h2 class="text-end"><i class="ri-file-history-fill f-left"></i>
                     <span>
                     <?php 
                         include('constant/config.php');
 
-                        // $sql = query ;
-                        // $query = mysqli_query($conn,$sql);
+                        $sql ="SELECT apt_id FROM tb_appointment_list WHERE status = 0 ORDER BY apt_id";
+                        $query = mysqli_query($conn,$sql);
 
-                        // $row = mysqli_num_rows($query);
-                        // echo $row;
+                        $row = mysqli_num_rows($query);
+                        echo $row;
                     ?>
                     </span>
                     </h2>
-                    <p class="m-b-0">Completed Orders<span class="f-right">351</span></p>
+                    <!-- <p class="m-b-0">Completed Orders<span class="f-right">351</span></p> -->
                 </div>
             </div>
-        </div> -->
+        </div>
         <!-- CARD 6 -->
-        <!-- <div class="col-md-4 col-xl-3">
+        <div class="col-md-4 col-xl-4">
             <div class="card bg-c-violet order-card">
                 <div class="card-block">
                     <h6 class="m-b-20">
-                         Title 
+                        Completed Appointment
                     </h6>
-                    <h2 class="text-end"><i class="fa fa-credit-card f-left"></i>
+                    <h2 class="text-end"><i class="ri-file-shield-2-fill f-left"></i>
                     <span>
                     <?php 
                         include('constant/config.php');
 
-                        // $sql = query ;
-                        // $query = mysqli_query($conn,$sql);
+                        $sql ="SELECT apt_id FROM tb_appointment_list WHERE status = 1 ORDER BY apt_id";
+                        $query = mysqli_query($conn,$sql);
 
-                        // $row = mysqli_num_rows($query);
-                        // echo $row;
+                        $row = mysqli_num_rows($query);
+                        echo $row;
                     ?>
                     </span>
                     </h2>
-                    <p class="m-b-0">Completed Orders<span class="f-right">351</span></p> 
+                    <!-- <p class="m-b-0">Completed Orders<span class="f-right">351</span></p>  -->
                 </div>
             </div>
-        </div> -->
+        </div>
+    </div>
+
         <!-- CARD 7 -->
-        <!-- <div class="col-md-4 col-xl-3">
+         <!-- <div class="col-md-4 col-xl-4">
             <div class="card bg-c-darkpink order-card">
                 <div class="card-block">
                     <h6 class="m-b-20">
@@ -187,7 +189,7 @@
             </div>
         </div> -->
         <!-- CARD 8 -->
-        <!-- <div class="col-md-4 col-xl-3">
+         <!-- <div class="col-md-4 col-xl-4">
             <div class="card bg-c-darkviolet order-card">
                 <div class="card-block">
                     <h6 class="m-b-20">
@@ -208,9 +210,9 @@
                     </h2>
                     <p class="m-b-0">Completed Orders<span class="f-right">351</span></p>
                 </div>
-            </div>
-        </div> -->
-	</div>
+            </div> -->
+        
+	
 
 </div>
 
