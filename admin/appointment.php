@@ -21,8 +21,10 @@
                 <th scope="col">User Name</th>
                 <th scope="col">Tests Name</th>
                 <th scope="col">Appointment Date & Time</th>
+                <th scope="col">Prescription</th>
                 <th scope="col">Status</th>
                 <th scope="col">UPDATE | DELETE</th>
+               
               </tr>
             </thead>
             <tbody>
@@ -33,7 +35,7 @@
                           al.code AS appointment_code,
                           u.username AS user_name,
                           t.test_name AS test_name,
-                          al.schedule, al.status ,al.apt_id
+                          al.schedule, al.status ,al.apt_id , al.pres
                       FROM
                           tb_appointment_list al
                       JOIN
@@ -51,8 +53,41 @@
                   echo '<td>' . $row["user_name"] . '</td>';
                   echo '<td>' . $row["test_name"] . '</td>';
                   echo '<td>' . $row["schedule"] . '</td>';
-                  echo "<td>" . $row['status'] . "</td>";
+                  // Prescription
+                  echo "<td>" ?> 
+                  <?php
+                  $pres=$row["pres"];
+                  if($pres!==""){
+                  ?>
+                    <a class="d-flex justify-content-center link-dark" href=<?php echo "../assets/upload/".$row["pres"]; ?> >  <i class="ri-eye-fill"></i></a>
+                  <?php
+                  } else {
+                  ?>
+                    <i  class="ri-eye-off-fill d-flex justify-content-center "></i>
+                  <?php
+                  }
+                  ?>
+                  <?php "</td>";
+                  // Status
+                  echo "<td>" ?> 
+                                    
+                  <?php
+                  $status=$row['status'];
+                  if($status==0){
+                  ?>
+                    Pending
+                  <?php
+                  } else {
+                  ?>
+                    Completed
+                  <?php
+                  }
+                  ?>
+                  <?php "</td>";
 
+                  
+
+                  
                   echo "<td>";
                     ?>
                     <button class="btn btn-success btn-sm">
