@@ -24,7 +24,7 @@ if (isset($_POST['create_appointment'])) {
     if ($stmt->execute()) {
         $_SESSION['status'] = "Appointment Added";
         $_SESSION['status_code'] = "success";
-        header('Location:../appointment.php');
+        header('Location:../viewappointment.php');
     } else {
         $_SESSION['status'] = "Appointment Not Added";
         $_SESSION['status_code'] = "error";

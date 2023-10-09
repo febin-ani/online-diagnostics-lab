@@ -15,7 +15,7 @@
     <div class="container">
       <a href="home.php" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
         <img src="assets/img/apple-touch-icon.png" width="50">
-        <h4 class="ps-2 pt-2">Avica Diagnostic Center</h4>
+        <h4 class="ps-2 pt-2">Avica Diagnostics Center</h4>
       </a>
       
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -26,6 +26,15 @@
           <li><a href="#about" class="nav-link px-2 text-white">About</a></li>
         </ul>
         
+        <?php
+        if(isset($_SESSION['usertype'])){
+        ?>
+        <a href="viewappointment.php" class="appointment-btn scrollto">
+          <span class="d-none d-md-inline">View </span>Appointment
+        </a>
+        <?php
+        }
+        ?>
         <a href="appointment.php" class="appointment-btn scrollto">
           <span class="d-none d-md-inline">Make an </span>Appointment
         </a>
