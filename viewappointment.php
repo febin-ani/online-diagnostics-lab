@@ -78,9 +78,13 @@
               ?>
                 Pending
               <?php
-              } else {
+              } elseif($status==1) {
               ?>
                 Approved
+              <?php
+              } else {
+              ?>
+                Completed
               <?php
               }
                 "</td>";

@@ -85,43 +85,50 @@
                     <?php
                   } else {
                     ?>
-                    Complected
+                    Completed
                     <?php
                   }
                   ?>
                   <?php "</td>";
+
                   echo "<td>";
-                    ?>
+                  ?>
                     
                     <button class="btn btn-danger btn-sm">
                       <a class="link-light" href="delete.php?apt_id=<?php echo $row["apt_id"]; ?>">Canceled</a>
                     </button>
                   
                   <?php "</td>";
+
                     echo "<td>";
+                    $status=$row['status'];
+                    if($status==0){
                   ?>
-                    
 
-                    <?php
-                      $status=$row['status'];
-                      if($status==0){
-                    ?>
-                    <button class="btn btn-primary btn-sm">
-                      <a class="link-light" href="update.php?apt_id=<?php echo $row["apt_id"]; ?>">Approved</a>
-                    </button>
-                  
-                    <?php
-                      } elseif($status==1) {
-                    ?>
-                    <button class="btn btn-success btn-sm">
-                      <a class="link-light" href="update.php?apt_id=<?php echo $row["apt_id"]; ?>">Complected</a>
-                    </button>
-                    <?php
-                      }
-                    ?>
+                  <button class="btn btn-primary btn-sm">
+                    <a class="link-light" href="update.php?apt_id=<?php echo $row["apt_id"]; ?>">Approve</a>
+                  </button>
+                
+                  <?php
+                    } elseif($status==1) {
+                  ?>
 
-                    <?php
-                    echo "</td>";
+                  <button class="btn btn-success btn-sm">
+                    <a class="link-light" href="update.php?apt_id=<?php echo $row["apt_id"]; ?>">Complete</a>
+                  </button>
+
+                  <?php
+                    } else {
+                  ?>
+
+                  <button class="btn btn-warning btn-sm">
+                    <a class="link-light" href="result.php?apt_id=<?php echo $row["apt_id"]; ?>">Result</a>
+                  </button>
+
+                  <?php
+                    }
+                  echo "</td>";
+
                   echo "</tr>";
                 }
               } else { ?>
