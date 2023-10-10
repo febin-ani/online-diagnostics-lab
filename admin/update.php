@@ -11,7 +11,7 @@ if (isset($_GET["apt_id"])) {
 
         if($status=='0'){
             $sql = "UPDATE tb_appointment_list SET status = 1 WHERE apt_id='" . $apt_id . "'";
-        } elseif($status=='1') {
+        } elseif($status=='1' && $status!='0') {
             $sql = "UPDATE tb_appointment_list SET status = 2 WHERE apt_id='" . $apt_id . "'";
         } else {
             $sql = "SELECT * FROM tb_appointment_list ";  
