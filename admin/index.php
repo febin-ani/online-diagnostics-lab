@@ -24,7 +24,9 @@
         <div class="col-md-4 col-xl-3">
             <div class="card bg-c-blue order-card">
                 <div class="card-block">
-                    <h6 class="m-b-20">Total Admin Users</h6>
+                    <h6 class="m-b-20" style="font-size: 14px";>
+                        Total Admin Users
+                    </h6>
                     <h2 class="text-end"><i class="ri-nurse-fill f-left"></i>
                     <span>
                     <?php 
@@ -46,7 +48,9 @@
         <div class="col-md-4 col-xl-3">
             <div class="card bg-c-yellow order-card">
                 <div class="card-block">
-                    <h6 class="m-b-20">Total Client Users</h6>
+                    <h6 class="m-b-20" style="font-size: 14px";>
+                        Total Client Users
+                    </h6>
                     <h2 class="text-end"><i class="ri-empathize-fill f-left"></i>
                     <span>
                     <?php 
@@ -69,7 +73,9 @@
         <div class="col-md-4 col-xl-3">
             <div class="card bg-c-green order-card">
                 <div class="card-block">
-                    <h6 class="m-b-20">Total Tests</h6>
+                    <h6 class="m-b-20" style="font-size: 14px";>
+                        Total Tests
+                    </h6>
                     <h2 class="text-end"><i class="ri-test-tube-fill f-left"></i>
                     <span>
                     <?php 
@@ -90,8 +96,36 @@
         <!-- CARD 4 -->
         <div class="col-md-4 col-xl-3">
             <div class="card bg-c-pink order-card">
+            <div class="card-block">
+                    <h6 class="m-b-20" style="font-size: 14px;>
+                        TITLE
+                    </h6>
+                    <h2 class="text-end"><i class="ri-file-history-fill f-left"></i>
+                    <span>
+                    <?php 
+                        // include('constant/config.php');
+
+                        // $sql ="";
+                        // $query = mysqli_query($conn,$sql);
+
+                        // $row = mysqli_num_rows($query);
+                        // echo $row;
+                    ?>
+                    </span>
+                    </h2>
+                    <!-- <p class="m-b-0">Completed Orders<span class="f-right">351</span></p> -->
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- SEPERATED -->
+    <div class="row ">
+        <!-- CARD 5 -->
+        <div class="col-md-4 col-xl-3">
+            <div class="card bg-c-orange order-card">
+                
                 <div class="card-block">
-                    <h6 class="m-b-20">
+                    <h6 class="m-b-20" style="font-size: 14px";>
                         Active Appointment
                     </h6>
                     <h2 class="text-end"><i class="ri-file-paper-2-fill f-left"></i>
@@ -111,14 +145,11 @@
                 </div>
             </div>
         </div>
-    </div>
-<!-- SEPERATED -->
-    <div class="row ">
-        <!-- CARD 5 -->
+        <!-- CARD 6 -->
         <div class="col-md-4 col-xl-3">
-            <div class="card bg-c-orange order-card">
+            <div class="card bg-c-violet order-card">
                 <div class="card-block">
-                    <h6 class="m-b-20">
+                    <h6 class="m-b-20" style="font-size: 14px";>
                         Pending  Appointment
                     </h6>
                     <h2 class="text-end"><i class="ri-file-history-fill f-left"></i>
@@ -138,11 +169,11 @@
                 </div>
             </div>
         </div>
-        <!-- CARD 6 -->
+        <!-- CARD 7 -->
         <div class="col-md-4 col-xl-3">
-            <div class="card bg-c-violet order-card">
+            <div class="card bg-c-darkpink order-card">
                 <div class="card-block">
-                    <h6 class="m-b-20">
+                    <h6 class="m-b-20" style="font-size: 14px";>
                         Approved Appointment
                     </h6>
                     <h2 class="text-end"><i class="ri-file-edit-fill f-left"></i>
@@ -162,12 +193,11 @@
                 </div>
             </div>
         </div>
-
-        <!-- CARD 7 -->
+        <!-- CARD 8  -->
         <div class="col-md-4 col-xl-3">
-            <div class="card bg-c-darkpink order-card">
+            <div class="card bg-c-darkviolet order-card">
                 <div class="card-block">
-                    <h6 class="m-b-20">
+                    <h6 class="m-b-20" style="font-size: 14px;">
                         Complected Appointment
                     </h6>
                     <h2 class="text-end"><i class="ri-file-shield-2-fill f-left"></i>
@@ -180,29 +210,6 @@
 
                         $row = mysqli_num_rows($query);
                         echo $row;
-                    ?>
-                    </span>
-                    </h2>
-                </div>
-            </div>
-        </div>
-        <!-- CARD 8  -->
-        <div class="col-md-4 col-xl-3">
-            <div class="card bg-c-darkviolet order-card">
-                <div class="card-block">
-                    <h6 class="m-b-20">
-                        Title
-                    </h6>
-                    <h2 class="text-end"><i class="fa fa-credit-card f-left"></i>
-                    <span>
-                    <?php 
-                        include('constant/config.php');
-
-                        // $sql = query ;
-                        // $query = mysqli_query($conn,$sql);
-
-                        // $row = mysqli_num_rows($query);
-                        // echo $row;
                     ?>
                     </span>
                     </h2>
