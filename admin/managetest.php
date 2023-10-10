@@ -7,7 +7,7 @@
 <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>View Test Details</h1>
+      <h1>Test Details</h1>
       <div class="d-grid gap-2 d-md-flex justify-content-md-end">
       <button  class="btn btn-primary">
         <a class="link-light" href="addtest.php">Add New Test

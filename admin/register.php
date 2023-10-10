@@ -89,7 +89,7 @@
 
 
     <div class="pagetitle">
-      <h1>View Users Details</h1>
+      <h1>Users Details</h1>
       <!-- Button trigger modal -->
       <div class="d-grid gap-2 d-md-flex justify-content-md-end">
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#adduserprofile">

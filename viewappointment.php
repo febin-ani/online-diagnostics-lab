@@ -80,7 +80,7 @@
               <?php
               } else {
               ?>
-                Completed
+                Approved
               <?php
               }
                 "</td>";

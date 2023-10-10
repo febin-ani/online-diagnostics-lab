@@ -11,11 +11,13 @@ if (isset($_POST['create_appointment'])) {
     $schedule = $_POST['schedule'];
     $test_id = $_POST['test_id'];
     $pres = $_FILES['pres']['name'];
+    $date = new DateTime();
+    $dateFormat = $date->format('Y-m-d H:i:s');
 
     // Insert a new appointment record into tb_appointment_list
-    $sql = "INSERT INTO tb_appointment_list (test_id, user_id, schedule, pres) VALUES (?, ?, ?, ?)";
+    $sql = "INSERT INTO tb_appointment_list (test_id, user_id, schedule, pres, date_created) VALUES (?, ?, ?, ?, ?)";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("iiss", $test_id, $user_id, $schedule, $pres);
+    $stmt->bind_param("iisss", $test_id, $user_id, $schedule, $pres, $dateFormat);
 
     if ($stmt->execute()) {
         // Generate the appointment code based on the auto-incremented apt_id

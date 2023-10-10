@@ -7,7 +7,7 @@
 <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>View Appointment Details</h1>
+      <h1>Appointment Details</h1>
     </div><!-- End Page Title -->
 
     <section class="section">
@@ -23,8 +23,7 @@
                 <th scope="col">Appointment Date & Time</th>
                 <th scope="col">Prescription</th>
                 <th scope="col">Status</th>
-                <th scope="col">UPDATE</th>
-                <th scope="col">DELETE</th>
+                <th scope="col">ACTION</th>
                
               </tr>
             </thead>
@@ -36,7 +35,10 @@
                           al.code AS appointment_code,
                           u.username AS user_name,
                           t.test_name AS test_name,
-                          al.schedule, al.status ,al.apt_id , al.pres
+                          al.schedule,
+                          al.status ,
+                          al.apt_id , 
+                          al.pres
                       FROM
                           tb_appointment_list al
                       JOIN
@@ -73,31 +75,45 @@
                   <?php
                   $status=$row['status'];
                   if($status==0){
-                  ?>
+                    ?>
                     Pending
-                  <?php
+                    <?php
+                  } elseif($status==1) {
+                    ?>
+                    Approved
+                    <?php
                   } else {
-                  ?>
-                    Completed
-                  <?php
+                    ?>
+                    Complected
+                    <?php
                   }
                   ?>
                   <?php "</td>";
                   // Upadte | Delete
                   echo "<td>";
                     ?>
-                    <button class="btn btn-success btn-sm">
-                      <a class="link-light" href="update.php?apt_id=<?php echo $row["apt_id"]; ?>">UPDATE</a>
+                    
+                    <button class="btn btn-danger btn-sm">
+                      <a class="link-light" href="delete.php?apt_id=<?php echo $row["apt_id"]; ?>">Canceled</a>
+                    </button>
+                    <?php
+                      $status=$row['status'];
+                      if($status==0){
+                    ?>
+                    <button class="btn btn-primary btn-sm">
+                      <a class="link-light" href="update.php?apt_id=<?php echo $row["apt_id"]; ?>">Approved</a>
                     </button>
                   
                     <?php
-                    echo "</td>";
-                    echo "<td>";
+                      } elseif($status==1) {
                     ?>
-                    
-                    <button class="btn btn-danger btn-sm">
-                      <a class="link-light" href="delete.php?apt_id=<?php echo $row["apt_id"]; ?>">DELETE</a>
+                    <button class="btn btn-success btn-sm">
+                      <a class="link-light" href="update.php?apt_id=<?php echo $row["apt_id"]; ?>">Complected</a>
                     </button>
+                    <?php
+                      }
+                    ?>
+
                     <?php
                     echo "</td>";
                   echo "</tr>";
