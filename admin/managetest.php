@@ -47,7 +47,7 @@
                       echo "<td>";
                       ?>
                       <button class="btn btn-success btn-sm">
-                        <a class="link-light" href="update.php?test_id=<?php echo $row["test_id"]; ?>">UPDATE</a>
+                        <a class="link-light" href="updatetest.php?id=<?php echo $row["test_id"]; ?>">UPDATE</a>
                       </button>
                       <?php
                       echo "</td>";
@@ -55,7 +55,7 @@
                       echo "<td>";
                       ?>
                       <button class="btn btn-danger btn-sm">
-                        <a class="link-light" href="delete.php?test_id=<?php echo $row["test_id"]; ?>">DELETE
+                        <a class="link-light" href="delete.php?id=<?php echo $row["test_id"]; ?>">DELETE
                       </button>
                       <?php
                       echo "</td>";

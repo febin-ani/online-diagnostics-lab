@@ -35,7 +35,33 @@ if (isset($_POST['submit'])){
             header('Location:../addtest.php');  
         }
     }
+} elseif (isset($_POST['update'])){
+
+    $id = $_GET['id'];
+    $test_name=$_POST['test_name'];
+    $test_desc=$_POST['test_desc'];
+    $price=$_POST['price'];
+
+
+    $sql="UPDATE `tb_test` SET `test_name`='$test_name',`test_desc`='$test_desc',`price`='$price' WHERE test_id = '$id'";
+
+    $query=mysqli_query($conn,$sql);
+
+    if ($query) {
+        // echo "Saved";
+        $_SESSION['status'] = "Test Updated";
+        $_SESSION['status_code'] = "success";
+        header('Location:../managetest.php');
+    }
+    else 
+    {
+        $_SESSION['status'] = "Test Not Updated";
+        $_SESSION['status_code'] = "error";
+        header('Location:../updatetest.php');  
+    }
 }
+
+
 
 ?>
 
