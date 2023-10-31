@@ -16,7 +16,6 @@
         <thead>
             <tr class="text-center ">
             <th scope="col">Appointment Code</th>
-            <th scope="col">User Name</th>
             <th scope="col">Tests Name</th>
             <th scope="col">Appointment Date & Time</th>
             <th scope="col">Prescription</th>
@@ -52,7 +51,6 @@
             while ($row = $result->fetch_assoc()) {
               echo '<tr class="text-center " >';
               echo '<td>' . $row["appointment_code"] . '</td>';
-              echo '<td>' . $row["user_name"] . '</td>';
               echo '<td>' . $row["test_name"] . '</td>';
               echo '<td>' . $row["schedule"] . '</td>';
               // Prescription

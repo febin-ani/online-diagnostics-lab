@@ -42,9 +42,6 @@ if (isset($_POST['userregister'])) {
     }
 }
 
-
-
-
 if (isset($_POST['register'])) {
     $username=$_POST['username'];
     $email=$_POST['email'];
@@ -85,5 +82,39 @@ if (isset($_POST['register'])) {
         }
     }
 }
+
+
+if (isset($_POST['update'])){
+
+    $id = $_GET['id'];
+    $uname=$_POST['uname'];
+    $usertype=$_POST['usertype'];
+    $pass=$_POST['pass'];
+    $cpass=$_POST['cpass'];
+
+    if($pass === $cpass){
+        $sql="UPDATE `tb_user` SET `username`='$uname',`pass`='$pass',`usertype`='$usertype' WHERE id = '$id'";
+
+        $query=mysqli_query($conn,$sql);
+
+        if ($query) {
+            // echo "Saved";
+            $_SESSION['success'] = "User Profile Updated";
+            header('Location:../register.php');
+        }
+        else 
+        {
+            $_SESSION['status'] = "User Profile Not Updated";
+            $_SESSION['status_code'] = "error";
+            header('Location:../updateuser.php');  
+        }
+    } else {
+        $_SESSION['status'] = "Password and Confirm Password Does Not Match";
+        $_SESSION['status_code'] = "warning";
+        header('Location:../updateuser.php');  
+    }
+}
+
+
 ?>
 

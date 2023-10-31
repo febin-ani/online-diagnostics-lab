@@ -21,7 +21,7 @@
 
 						<?php
 							if(isset($_SESSION['success']) && $_SESSION['success'] !=''){
-								echo '<h6 class="text-success"> '.$_SESSION["success"].' </h6>';
+								echo '<h6 class="text-danger fw-bold"> '.$_SESSION["success"].' </h6>';
 								unset($_SESSION['success']);
 							}
 						?>

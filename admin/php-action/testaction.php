@@ -35,7 +35,9 @@ if (isset($_POST['submit'])){
             header('Location:../addtest.php');  
         }
     }
-} elseif (isset($_POST['update'])){
+} 
+
+if (isset($_POST['update'])){
 
     $id = $_GET['id'];
     $test_name=$_POST['test_name'];

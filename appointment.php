@@ -56,6 +56,7 @@
                 ?>
                         <a href="admin/login.php" class="btn btn-primary" name="create_appointment">Create Appointment</a>
                 <?php
+                    $_SESSION['success'] = "You Need Login to Continue";
                     }
                 ?>
             </div>
