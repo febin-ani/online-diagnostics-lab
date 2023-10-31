@@ -19,7 +19,7 @@
 							<i class="ri-user-3-line"></i> User Register
 							</h1>
 
-							<form method="POST" action="php-action/adduseraction.php" >
+							<form method="POST" action="php-action/useraction.php" >
 
                                 <div class="mb-3">
 									<label class="mb-2 text-muted">Username</label>
