@@ -19,7 +19,9 @@
             <th scope="col">Tests Name</th>
             <th scope="col">Appointment Date & Time</th>
             <th scope="col">Prescription</th>
+            <th scope="col">Price</th>
             <th scope="col">Status</th>
+            <th scope="col"></th>
             </tr>
         </thead>
         <tbody>
@@ -30,28 +32,27 @@
           $sql = "SELECT 
                       al.code AS appointment_code,
                       u.username AS user_name,
-                      t.test_name AS test_name,
                       al.schedule,
                       al.status,
                       al.apt_id,
-                      al.pres 
+                      al.pres,
+                      al.price
                   FROM
                       tb_appointment_list al
                   JOIN
                       tb_user u ON al.user_id = u.id
-                  JOIN
-                      tb_test t ON al.test_id = t.test_id
                   WHERE
                       u.id = '$id'";
 
           $result = $conn->query($sql);
+
 
           if ($result->num_rows > 0) {
               // Output data of each row
             while ($row = $result->fetch_assoc()) {
               echo '<tr class="text-center " >';
               echo '<td>' . $row["appointment_code"] . '</td>';
-              echo '<td>' . $row["test_name"] . '</td>';
+              // echo '<td>' . . '</td>';
               echo '<td>' . $row["schedule"] . '</td>';
               // Prescription
               echo "<td>" ?> 
@@ -67,6 +68,9 @@
               <?php
               }
               "</td>";
+
+              echo '<td>' . $row["price"] . '</td>';
+
               // Status
               echo "<td>" ?> 
                                   

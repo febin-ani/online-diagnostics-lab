@@ -35,7 +35,7 @@
               $sql = "SELECT 
                           al.code AS appointment_code,
                           u.username AS user_name,
-                          t.test_name AS test_name,
+                          -- t.test_name AS test_name,
                           al.schedule,
                           al.status ,
                           al.apt_id , 
@@ -44,8 +44,8 @@
                           tb_appointment_list al
                       JOIN
                           tb_user u ON al.user_id = u.id
-                      JOIN
-                          tb_test t ON al.test_id = t.test_id;";
+                      -- JOIN
+                      --     tb_test t ON al.test_id = t.test_id;";
 
               $result = $conn->query($sql);
 
@@ -55,7 +55,7 @@
                   echo '<tr class="text-center ">';
                   echo '<td>' . $row["appointment_code"] . '</td>';
                   echo '<td>' . $row["user_name"] . '</td>';
-                  echo '<td>' . $row["test_name"] . '</td>';
+                  // echo '<td>' . $row["test_name"] . '</td>';
                   echo '<td>' . $row["schedule"] . '</td>';
                   // Prescription
                   echo "<td>" ?> 

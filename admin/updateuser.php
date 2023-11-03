@@ -19,7 +19,8 @@
                 {
             ?>
             <div class="card mb-4">
-              <div class="card-header"><strong>Update User Profile</strong><span class="small ms-1"></span></div>
+              <div class="card-header"><strong>Update User Profile</strong><span class="small ms-1"></span>
+              <a class="btn btn-danger mb-3" style="margin-left:200px;" href="<?php echo $_SERVER['HTTP_REFERER'] ?>" >Back</a></div>
               <div class="card-body">
                 <div class="example">
                   <div class="tab-content rounded-bottom">
@@ -55,7 +56,7 @@
                         <div class="col-auto">
                       
                             <button type="submit" class="btn btn-primary mb-3" name="update">Update</button>
-                            <button type="reset" class="btn btn-danger mb-3" name="cancel">Cancel</button>
+                            
                         </div>
                     </div>
                   </div>
