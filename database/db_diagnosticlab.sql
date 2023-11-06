@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 06, 2023 at 12:15 PM
+-- Generation Time: Nov 03, 2023 at 10:21 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -38,10 +38,7 @@ CREATE TABLE `tb_appointment` (
 --
 
 INSERT INTO `tb_appointment` (`apt_id`, `test_id`, `apt_code`) VALUES
-(3, 19, 'APT00052'),
-(4, 21, 'APT00052'),
-(5, 21, 'APT00053'),
-(6, 23, 'APT00053');
+(1, 23, 'APT00050');
 
 -- --------------------------------------------------------
 
@@ -66,8 +63,9 @@ CREATE TABLE `tb_appointment_list` (
 --
 
 INSERT INTO `tb_appointment_list` (`apt_id`, `code`, `user_id`, `schedule`, `pres`, `price`, `status`, `date_created`, `date_updated`) VALUES
-(52, 'APT00052', 10, '2023-11-25 10:07:00', '', 4120, 2, '2023-11-06 05:37:56', NULL),
-(53, 'APT00053', 10, '2023-11-06 19:39:00', '', 6500, 0, '2023-11-06 12:09:41', NULL);
+(48, 'APT00048', 7, '2023-12-01 14:40:00', '', 0, 0, '2023-11-03 10:11:04', NULL),
+(49, 'APT00049', 7, '2023-12-01 14:40:00', '', 6620, 0, '2023-11-03 10:15:28', NULL),
+(50, 'APT00050', 7, '2023-12-02 17:47:00', '', 2500, 0, '2023-11-03 10:17:37', NULL);
 
 -- --------------------------------------------------------
 
@@ -160,13 +158,13 @@ ALTER TABLE `tb_user`
 -- AUTO_INCREMENT for table `tb_appointment`
 --
 ALTER TABLE `tb_appointment`
-  MODIFY `apt_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `apt_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `tb_appointment_list`
 --
 ALTER TABLE `tb_appointment_list`
-  MODIFY `apt_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
+  MODIFY `apt_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- AUTO_INCREMENT for table `tb_test`
