@@ -21,7 +21,7 @@
             <th scope="col">Prescription</th>
             <th scope="col">Price</th>
             <th scope="col">Status</th>
-            <th scope="col"></th>
+            <th scope="col">Print</th>
             </tr>
         </thead>
         <tbody>
@@ -92,7 +92,8 @@
               <?php
               }
                 "</td>";
-              echo "</tr>";
+                
+              echo "<td></td><td class='btn btn-dark btn-sm text-dark' onclick='printMe(event)'>Print</td></tr>";
             }
           } else { ?>
           <div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -128,6 +129,23 @@
     
    }
    hideRows();
+
+   function printMe(event){
+    var y = event.target.parentElement;
+    var o = document.getElementsByTagName("tr")[0].innerHTML;
+    var m = window.open('','','width=500px','height=500px');
+    m.document.write("<link href='assets/vendor/bootstrap/css/bootstrap.min.css' rel='stylesheet'>");
+    m.document.write("<table class='table'>");
+    m.document.write("<tr>");
+    m.document.write(o);
+    m.document.write("</tr>");
+    m.document.write("<tr>");
+    m.document.write(y.innerHTML);
+    m.document.write("</tr>");
+    m.document.write("</table>");
+    m.getElementsByClassName("print")[0].style.display = "";
+    m.window.print();
+   }
     
   </script>
 

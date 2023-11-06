@@ -28,22 +28,13 @@
 
         <?php
           $id = $_SESSION['id'];
-          // $sql = "SELECT * FROM `tb_appointment_list`
-          // LEFT JOIN `tb_appointment`
-          // ON `tb_appointment.apt_code` = `tb_appointment_list.code`
-          // LEFT JOIN `tb_test`
-          // ON `tb_appointment.test_id` = `tb_test.test_id`";
 
-          // $sql = "SELECT * FROM tb_appointment_list a JOIN tb_appointment b ON a.code = b.apt_code JOIN tb_test c ON b.test_id = c.test_id";
-
-          $sql = "SELECT
-          *
-      FROM tb_appointment s
-      INNER JOIN tb_test cu  
-      ON cu.test_id = s.test_id 
-      INNER JOIN tb_appointment_list AS ci
-      ON ci.code = s.apt_code WHERE ci.user_id = $id;
-      ";
+          $sql = "SELECT 
+                  FROM tb_appointment s
+                  INNER JOIN tb_test cu  
+                  ON cu.test_id = s.test_id 
+                  INNER JOIN tb_appointment_list AS ci
+                  ON ci.code = s.apt_code WHERE ci.user_id = $id;";
           $result = $conn->query($sql);
 
           if ($result->num_rows > 0) {
@@ -111,25 +102,7 @@
 
   </main><!-- End #main -->
 
-  <script>
-   const hideRows = () => {
-    var arr = [];
-    var x = document.getElementsByClassName("nn");
-
-    for(let i = 0; i< x.length; i++){
-      
-      if(arr.includes(x[i].innerHTML)){
-        x[i].classList.add("hide");
-        x[i].parentElement.style.display = "none";
-      }
-      arr.push(x[i].innerHTML);
-    }
-
-    
-   }
-   hideRows();
-    
-  </script>
+  
 
 <?php
 include('constant/scripts.php');

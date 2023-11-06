@@ -97,7 +97,7 @@
         <div class="col-md-4 col-xl-3">
             <div class="card bg-c-pink order-card">
             <div class="card-block">
-                    <h6 class="m-b-20" style="font-size: 14px;>
+                    <h6 class="m-b-20" style="font-size: 14px;">
                         TITLE
                     </h6>
                     <h2 class="text-end"><i class="ri-file-history-fill f-left"></i>
