@@ -14,6 +14,10 @@ include('constant/header.php');
                         <h4>Make Appointment</h4>
                     </div>
                     <div class="mb-3">
+                        <label for="name" class="form-label">Full Name:</label>
+                        <input type="text" class="form-control" name="name">
+                    </div>
+                    <div class="mb-3">
                         <label for="schedule" class="form-label">Appointment Date and Time:</label>
                         <input type="datetime-local" class="form-control" name="schedule" min="<?php echo date('Y-m-d\TH:i'); ?>" required>
                     </div>
@@ -30,7 +34,7 @@ include('constant/header.php');
                                 $test_id = $row['test_id'];
                                 $test_name = $row['test_name'];
                         ?>
-                                <input type="checkbox" name="test[]" value=" <?php echo $test_id; ?>"> <?php echo $test_name; ?><br>
+                        <input type="checkbox" name="test[]" value=" <?php echo $test_id; ?>"> <?php echo $test_name; ?><br>
                         <?php
                             }
                         } else {

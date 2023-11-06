@@ -19,6 +19,7 @@
               <tr class="text-center ">
                 <th scope="col">Appointment Code</th>
                 <th scope="col">User Name</th>
+                <th scope="col">Patient Name</th>
                 <th scope="col">Tests Name</th>
                 <th scope="col">Appointment Date & Time</th>
                 <th scope="col">Prescription</th>
@@ -33,19 +34,17 @@
             <?php
               // Retrieve appointment data from tb_appointment_list table
               $sql = "SELECT 
-                          al.code AS appointment_code,
-                          u.username AS user_name,
-                          -- t.test_name AS test_name,
-                          al.schedule,
-                          al.status ,
-                          al.apt_id , 
-                          al.pres
-                      FROM
-                          tb_appointment_list al
-                      JOIN
-                          tb_user u ON al.user_id = u.id
-                      -- JOIN
-                      --     tb_test t ON al.test_id = t.test_id;";
+                          al.*,u.*,
+                          GROUP_CONCAT(DISTINCT t.test_name ORDER BY t.test_id) AS testNames
+                          FROM
+                              tb_appointment_list AS al
+                          LEFT JOIN
+                              tb_appointment AS a ON al.code = a.apt_code
+                          LEFT JOIN
+                              tb_test AS t ON a.test_id = t.test_id
+                          LEFT JOIN
+                              tb_user AS u ON al.user_id = u.id
+                          GROUP BY al.code";
 
               $result = $conn->query($sql);
 
@@ -53,9 +52,10 @@
                   // Output data of each row
                 while ($row = $result->fetch_assoc()) {
                   echo '<tr class="text-center ">';
-                  echo '<td>' . $row["appointment_code"] . '</td>';
-                  echo '<td>' . $row["user_name"] . '</td>';
-                  // echo '<td>' . $row["test_name"] . '</td>';
+                  echo '<td>' . $row["code"] . '</td>';
+                  echo '<td>' . $row["username"] . '</td>';
+                  echo '<td>' . $row["name"] . '</td>';
+                  echo '<td>' . $row["testNames"] . '</td>';
                   echo '<td>' . $row["schedule"] . '</td>';
                   // Prescription
                   echo "<td>" ?> 

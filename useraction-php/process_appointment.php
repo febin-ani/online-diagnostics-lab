@@ -12,6 +12,8 @@ if (isset($_POST['create_appointment'])) {
 
     // Get the ID of the logged-in user
     $user_id = $_SESSION['id'];
+
+    $name = $_POST['name'];
     $schedule = $_POST['schedule'];
     // $test_id = $_POST['test_id'];
     $pres = $_FILES['pres']['name'];
@@ -20,9 +22,9 @@ if (isset($_POST['create_appointment'])) {
 
 
     // Insert a new appointment record into tb_appointment_list
-    $sql = "INSERT INTO tb_appointment_list (user_id, schedule, pres, date_created) VALUES ( ?, ?, ?, ?)";
+    $sql = "INSERT INTO tb_appointment_list (name, user_id, schedule, pres, date_created) VALUES (?, ?, ?, ?, ?)";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("isss", $user_id, $schedule, $pres, $dateFormat);
+    $stmt->bind_param("sisss", $name, $user_id, $schedule, $pres, $dateFormat);
 
     if ($stmt->execute()) {
         // Generate the appointment code based on the auto-incremented apt_id

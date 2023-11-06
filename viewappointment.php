@@ -21,29 +21,28 @@
             <th scope="col">Prescription</th>
             <th scope="col">Price</th>
             <th scope="col">Status</th>
-            <th scope="col">Print</th>
+            <th scope="col"></th>
             </tr>
         </thead>
         <tbody>
 
         <?php
           $id = $_SESSION['id'];
-          // $sql = "SELECT * FROM `tb_appointment_list`
-          // LEFT JOIN `tb_appointment`
-          // ON `tb_appointment.apt_code` = `tb_appointment_list.code`
-          // LEFT JOIN `tb_test`
-          // ON `tb_appointment.test_id` = `tb_test.test_id`";
-
-          // $sql = "SELECT * FROM tb_appointment_list a JOIN tb_appointment b ON a.code = b.apt_code JOIN tb_test c ON b.test_id = c.test_id";
 
           $sql = "SELECT
-          *
-      FROM tb_appointment s
-      INNER JOIN tb_test cu  
-      ON cu.test_id = s.test_id 
-      INNER JOIN tb_appointment_list AS ci
-      ON ci.code = s.apt_code WHERE ci.user_id = $id;
-      ";
+                      al.*,
+                      GROUP_CONCAT(DISTINCT t.test_name ORDER BY t.test_id) AS test_names
+                  FROM
+                      tb_appointment_list AS al
+                  LEFT JOIN
+                      tb_appointment AS a ON al.code = a.apt_code
+                  LEFT JOIN
+                      tb_test AS t ON a.test_id = t.test_id
+                  WHERE
+                      al.user_id = $id
+                  GROUP BY al.code
+                  ORDER BY al.schedule";
+
           $result = $conn->query($sql);
 
           if ($result->num_rows > 0) {
@@ -52,9 +51,8 @@
             while ($row = $result->fetch_assoc()) {
 
               echo '<tr class="text-center">';
-              echo '<td class="nn">' . $row["apt_code"] . '</td>';
-              // echo '<td>' . 
-              //   . '</td>';
+              echo '<td>' . $row["code"] . '</td>';
+              echo '<td>' . $row["test_names"] . '</td>'; 
               echo '<td>' . $row["schedule"] . '</td>';
               // Prescription
               echo "<td>" ?> 
@@ -92,8 +90,7 @@
               <?php
               }
                 "</td>";
-                
-              echo "<td></td><td class='btn btn-dark btn-sm text-dark' onclick='printMe(event)'>Print</td></tr>";
+              echo "</tr>";
             }
           } else { ?>
           <div class="alert alert-danger alert-dismissible fade show" role="alert">
@@ -112,42 +109,7 @@
 
   </main><!-- End #main -->
 
-  <script>
-   const hideRows = () => {
-    var arr = [];
-    var x = document.getElementsByClassName("nn");
-
-    for(let i = 0; i< x.length; i++){
-      
-      if(arr.includes(x[i].innerHTML)){
-        x[i].classList.add("hide");
-        x[i].parentElement.style.display = "none";
-      }
-      arr.push(x[i].innerHTML);
-    }
-
-    
-   }
-   hideRows();
-
-   function printMe(event){
-    var y = event.target.parentElement;
-    var o = document.getElementsByTagName("tr")[0].innerHTML;
-    var m = window.open('','','width=500px','height=500px');
-    m.document.write("<link href='assets/vendor/bootstrap/css/bootstrap.min.css' rel='stylesheet'>");
-    m.document.write("<table class='table'>");
-    m.document.write("<tr>");
-    m.document.write(o);
-    m.document.write("</tr>");
-    m.document.write("<tr>");
-    m.document.write(y.innerHTML);
-    m.document.write("</tr>");
-    m.document.write("</table>");
-    m.getElementsByClassName("print")[0].style.display = "";
-    m.window.print();
-   }
-    
-  </script>
+  
 
 <?php
 include('constant/scripts.php');
