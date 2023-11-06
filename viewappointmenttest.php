@@ -29,12 +29,20 @@
         <?php
           $id = $_SESSION['id'];
 
-          $sql = "SELECT 
-                  FROM tb_appointment s
-                  INNER JOIN tb_test cu  
-                  ON cu.test_id = s.test_id 
-                  INNER JOIN tb_appointment_list AS ci
-                  ON ci.code = s.apt_code WHERE ci.user_id = $id;";
+          $sql = "SELECT
+                      al.*,
+                      GROUP_CONCAT(DISTINCT t.test_name ORDER BY t.test_id) AS test_names
+                  FROM
+                      tb_appointment_list AS al
+                  LEFT JOIN
+                      tb_appointment AS a ON al.code = a.apt_code
+                  LEFT JOIN
+                      tb_test AS t ON a.test_id = t.test_id
+                  WHERE
+                      al.user_id = $id
+                  GROUP BY al.code
+                  ORDER BY al.schedule";
+
           $result = $conn->query($sql);
 
           if ($result->num_rows > 0) {
@@ -43,9 +51,8 @@
             while ($row = $result->fetch_assoc()) {
 
               echo '<tr class="text-center">';
-              echo '<td class="nn">' . $row["apt_code"] . '</td>';
-              // echo '<td>' . 
-              //   . '</td>';
+              echo '<td>' . $row["code"] . '</td>';
+              echo '<td>' . $row["test_names"] . '</td>'; 
               echo '<td>' . $row["schedule"] . '</td>';
               // Prescription
               echo "<td>" ?> 
