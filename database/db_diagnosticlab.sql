@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 06, 2023 at 12:52 PM
+-- Generation Time: Nov 06, 2023 at 06:09 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -38,14 +38,9 @@ CREATE TABLE `tb_appointment` (
 --
 
 INSERT INTO `tb_appointment` (`apt_id`, `test_id`, `apt_code`) VALUES
-(3, 19, 'APT00052'),
-(4, 21, 'APT00052'),
-(5, 21, 'APT00053'),
-(6, 23, 'APT00053'),
-(7, 19, 'APT00054'),
-(8, 19, 'APT00055'),
-(9, 21, 'APT00055'),
-(10, 23, 'APT00055');
+(12, 19, 'APT00057'),
+(13, 21, 'APT00057'),
+(14, 23, 'APT00058');
 
 -- --------------------------------------------------------
 
@@ -55,12 +50,14 @@ INSERT INTO `tb_appointment` (`apt_id`, `test_id`, `apt_code`) VALUES
 
 CREATE TABLE `tb_appointment_list` (
   `apt_id` int(10) NOT NULL,
+  `name` text NOT NULL,
   `code` varchar(100) NOT NULL,
   `user_id` int(10) NOT NULL,
   `schedule` datetime NOT NULL,
   `pres` varchar(150) NOT NULL,
   `price` int(10) NOT NULL,
   `status` int(50) NOT NULL,
+  `payment_status` int(50) NOT NULL,
   `date_created` datetime NOT NULL,
   `date_updated` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -69,11 +66,9 @@ CREATE TABLE `tb_appointment_list` (
 -- Dumping data for table `tb_appointment_list`
 --
 
-INSERT INTO `tb_appointment_list` (`apt_id`, `code`, `user_id`, `schedule`, `pres`, `price`, `status`, `date_created`, `date_updated`) VALUES
-(52, 'APT00052', 10, '2023-11-25 10:07:00', '', 4120, 2, '2023-11-06 05:37:56', NULL),
-(53, 'APT00053', 10, '2023-11-06 19:39:00', '', 6500, 0, '2023-11-06 12:09:41', NULL),
-(54, 'APT00054', 10, '2023-11-25 16:54:00', '', 120, 0, '2023-11-06 12:24:48', NULL),
-(55, 'APT00055', 10, '2023-11-14 16:57:00', '', 6620, 0, '2023-11-06 12:28:03', NULL);
+INSERT INTO `tb_appointment_list` (`apt_id`, `name`, `code`, `user_id`, `schedule`, `pres`, `price`, `status`, `payment_status`, `date_created`, `date_updated`) VALUES
+(57, 'Febin Ani', 'APT00057', 10, '2023-11-09 20:16:00', '', 4120, 1, 0, '2023-11-06 15:46:40', NULL),
+(58, 'Leya', 'APT00058', 10, '2023-11-15 22:02:00', '', 2500, 0, 0, '2023-11-06 17:33:37', NULL);
 
 -- --------------------------------------------------------
 
@@ -166,13 +161,13 @@ ALTER TABLE `tb_user`
 -- AUTO_INCREMENT for table `tb_appointment`
 --
 ALTER TABLE `tb_appointment`
-  MODIFY `apt_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `apt_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `tb_appointment_list`
 --
 ALTER TABLE `tb_appointment_list`
-  MODIFY `apt_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `apt_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=59;
 
 --
 -- AUTO_INCREMENT for table `tb_test`
