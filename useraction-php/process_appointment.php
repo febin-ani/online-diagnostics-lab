@@ -59,7 +59,7 @@ if (isset($_POST['create_appointment'])) {
 
         $_SESSION['status'] = "Appointment Added";
         $_SESSION['status_code'] = "success";
-        header('Location:../viewappointment.php');
+        header('Location:../view.php');
     } else {
         $_SESSION['status'] = "Appointment Not Added";
         $_SESSION['status_code'] = "error";

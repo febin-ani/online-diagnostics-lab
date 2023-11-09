@@ -127,7 +127,10 @@
                         Pending
                         <?php if($status >= 1){
                         ?>
-                            <button class="ms-2 btn btn-danger btn-sm">Pay Now [Online]</button>
+                            <a href="payment.php">
+                                <button class="ms-2 btn btn-danger btn-sm">Pay Now [Online]</button>
+                            </a>
+                            
                         <?php } ?>
                     <?php
                     } else {

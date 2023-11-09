@@ -33,7 +33,7 @@
       <?php
       if(isset($_SESSION['usertype'])){
       ?>
-        <a href="viewappointment.php" class="appointment-btn scrollto">
+        <a href="view.php" class="appointment-btn scrollto">
           <span class="d-none d-md-inline">View </span>Appointment
         </a>
       <?php
@@ -47,7 +47,7 @@
           <a class=" d-flex nav-link align-items-center pe-0" data-bs-toggle="dropdown" >
             <img src="https://github.com/febin-ani.png" width="40" alt="Profile" class="rounded-circle">
             <span class="d-none d-md-block dropdown-toggle ps-2 text-light text-decoration-none" >
-            <?php echo "<span class='text-uppercase'>" .$_SESSION['username']. "</span>"; ?> 
+            <?php echo "<span class='text-uppercase'>" .$_SESSION['usertype']. "</span>"; ?> 
             </span>
           </a><!-- End Profile Iamge Icon -->
   
