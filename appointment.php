@@ -61,8 +61,7 @@ include('constant/header.php');
                         $_SESSION['success'] = "You Need Login to Continue";
                     }
                     ?>
-            </div>
-            </form>
+                </form>
         </div>
         </div>
     </section>

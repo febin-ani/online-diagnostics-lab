@@ -87,13 +87,13 @@ if (isset($_POST['register'])) {
 if (isset($_POST['update'])){
 
     $id = $_GET['id'];
-    $uname=$_POST['uname'];
+    $username=$_POST['usen$username'];
     $usertype=$_POST['usertype'];
     $pass=$_POST['pass'];
     $cpass=$_POST['cpass'];
 
     if($pass === $cpass){
-        $sql="UPDATE `tb_user` SET `username`='$uname',`pass`='$pass',`usertype`='$usertype' WHERE id = '$id'";
+        $sql="UPDATE `tb_user` SET `username`='$username',`pass`='$pass',`usertype`='$usertype' WHERE id = '$id'";
 
         $query=mysqli_query($conn,$sql);
 
@@ -115,6 +115,36 @@ if (isset($_POST['update'])){
     }
 }
 
+if (isset($_POST['update_profile'])){
+
+    $id = $_GET['id'];
+    $fname=$_POST['fname'];
+    $lname=$_POST['lname'];
+    $gender=$_POST['gender'];
+    $contact=$_POST['contact'];
+    $username=$_POST['$username'];
+    $email=$_POST['email'];
+    $dob=$_POST['dob'];
+    $address=$_POST['address'];
+    $date = new DateTime();
+    $date_updated = $date->format('Y-m-d H:i:s');
+
+    $sql="UPDATE `tb_user` SET `fname`='[value-2]',`lname`='[value-3]',`gender`='[value-4]',`contact`='[value-5]',`username`='[value-6]',`email`='[value-7]',`pass`='[value-8]',`dob`='[value-9]',`address`='[value-10]',`usertype`='[value-11]',`date_created`='[value-12]',`date_updated`='[value-13]' WHERE id = '$id'";
+
+    $query=mysqli_query($conn,$sql);
+
+    if ($query) {
+        // echo "Saved";
+        $_SESSION['success'] = "User Profile Updated";
+        header('Location:../register.php');
+    }
+    else 
+    {
+        $_SESSION['status'] = "User Profile Not Updated";
+        $_SESSION['status_code'] = "error";
+        header('Location:../updateuser.php');  
+    }
+}
 
 ?>
 

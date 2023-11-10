@@ -46,7 +46,7 @@
         <form class="row g-3" onsubmit="return pay(this);">
             <div class="col-12">
                 <label for="name" >Card Holder's Name:</label>
-                <input type="test" class="form-control" required>
+                <input type="text" class="form-control" required>
             </div>
             <div class="col-12">
                 <label for="cardnum" class="form-label">Card Account Number:</label>
