@@ -129,7 +129,7 @@ if (isset($_POST['update_profile'])){
     $date = new DateTime();
     $date_updated = $date->format('Y-m-d H:i:s');
 
-    $sql="UPDATE `tb_user` SET `fname`='[value-2]',`lname`='[value-3]',`gender`='[value-4]',`contact`='[value-5]',`username`='[value-6]',`email`='[value-7]',`pass`='[value-8]',`dob`='[value-9]',`address`='[value-10]',`usertype`='[value-11]',`date_created`='[value-12]',`date_updated`='[value-13]' WHERE id = '$id'";
+    $sql="UPDATE `tb_user` SET `fname`='$fname',`lname`='$lname',`gender`='$gender',`contact`='$contact',`username`='$username',`email`='$email',`dob`='$dob',`address`='$address',`date_updated`='$date_updated' WHERE id = '$id'";
 
     $query=mysqli_query($conn,$sql);
 

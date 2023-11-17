@@ -103,6 +103,9 @@
                         <?php if($status==0){
                         ?>
                             Pending
+                            <a href="cancelappointment.php?id=<?php echo $row["apt_id"]; ?>">
+                                <button class="btn btn-warning btn-sm">Cancel Appointment</button>
+                            </a>
                         <?php
                         } elseif($status==1) {
                         ?>
