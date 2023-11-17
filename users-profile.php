@@ -24,11 +24,11 @@ $id = $_SESSION["id"];
                     </div>
                     <div class="col-md-6">
                         <label class="form-label"> First Name:</label>
-                        <input type="text" class="form-control" name="fname" value="<?php echo $row['fname']; ?>" required>
+                        <input type="text" class="form-control" name="fname" value="<?php echo $row['fname']; ?>" >
                     </div>
                     <div class="col-md-6">
                         <label class="form-label"> Last Name:</label>
-                        <input type="text" class="form-control" name="lname" value="<?php echo $row['lname']; ?>" required>
+                        <input type="text" class="form-control" name="lname" value="<?php echo $row['lname']; ?>" >
                     </div>
                     <div class="col-md-3">
                     <label class="form-label">Gender:</label>
@@ -44,15 +44,15 @@ $id = $_SESSION["id"];
                     </div>
                     <div class="col-md-6">
                         <label class="form-label"> Contact Number:</label>
-                        <input type="number" class="form-control" name="contact" value="<?php echo $row['contact']; ?>" required>
+                        <input type="number" class="form-control" name="contact" value="<?php echo $row['contact']; ?>" >
                     </div>
                     <div class="col-md-6">
                         <label class="form-label"> User Name:</label>
-                        <input type="text" class="form-control" name="username" value="<?php echo $row['username']; ?>" required>
+                        <input type="text" class="form-control" name="username" value="<?php echo $row['username']; ?>" >
                     </div>
                     <div class="col-md-6">
                         <label class="form-label"> Email:</label>
-                        <input type="text" class="form-control" name="email" value="<?php echo $row['email']; ?>" required>
+                        <input type="text" class="form-control" name="email" value="<?php echo $row['email']; ?>" >
                     </div>
                     <div class="mb-3">
                         <label  class="form-label">Address:</label>

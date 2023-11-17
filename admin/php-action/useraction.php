@@ -136,13 +136,13 @@ if (isset($_POST['update_profile'])){
     if ($query) {
         // echo "Saved";
         $_SESSION['success'] = "User Profile Updated";
-        header('Location:../register.php');
+        header('Location:../../home.php');
     }
     else 
     {
         $_SESSION['status'] = "User Profile Not Updated";
         $_SESSION['status_code'] = "error";
-        header('Location:../updateuser.php');  
+        header('Location:../../users-profile.php');  
     }
 }
 
